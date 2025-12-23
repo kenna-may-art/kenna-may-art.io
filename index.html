@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kenna May — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#">Kenna May</a>
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1 class="role">Digital Media • Motion Graphics • Illustration</h1>
+      <p class="tagline">
+        Creating visual experiences through motion, design, and digital art.
+        Available for freelance and full-time opportunities.
+      </p>
+<div class="actions">
+  <a class="btn btn-solid" href="portfolio.html">View Portfolio</a>
+  
+  <a class="btn btn-outline" href="resume.pdf" download>Download Resume</a>
+</div>
+
+
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+        <p>A showcase of recent projects and creative explorations</p>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="#" aria-label="Open Neon Dreams">
+          <div class="thumb">
+            <!-- Replace with your own image -->
+            <img src="thumbs/neon-dreams.jpg" alt="Neon Dreams thumbnail" />
+          </div>
+          <div class="card-body">
+            <h3>Neon Dreams</h3>
+            <span>Motion study + style frames</span>
+          </div>
+        </a>
+
+        <a class="card" href="#" aria-label="Open Poster Series">
+          <div class="thumb">
+            <img src="thumbs/poster-series.jpg" alt="Poster Series thumbnail" />
+          </div>
+          <div class="card-body">
+            <h3>Poster Series</h3>
+            <span>Illustration + layout</span>
+          </div>
+        </a>
+
+        <a class="card" href="#" aria-label="Open Abstract Forms">
+          <div class="thumb">
+            <img src="thumbs/abstract-forms.jpg" alt="Abstract Forms thumbnail" />
+          </div>
+          <div class="card-body">
+            <h3>Abstract Forms</h3>
+            <span>3D accents + compositing</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      
+      <div class="section-head">
+        <h2>About</h2>
+        <p>
+          Kenna May is a visual development artist with a focus on character and environment design for narrative-driven projects.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Email: <a class="link" href="mailto:you@example.com">you@example.com</a></p>
+      </div>
+    </section>
+
+<footer class="footer">
+  <div class="socials">
+    <a href="https://www.deviantart.com/USERNAME" target="_blank" rel="noopener">DeviantArt</a>
+    <a href="https://www.instagram.com/USERNAME" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.youtube.com/@USERNAME" target="_blank" rel="noopener">YouTube</a>
+  </div>
+  <p>© <span id="year"></span> Kenna May</p>
+</footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
