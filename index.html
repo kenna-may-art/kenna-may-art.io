@@ -20,11 +20,11 @@
 
           <div class="hero-actions">
             <a class="hero-btn hero-btn-solid" href="#work">VIEW MY WORK</a>
-            <a class="hero-btn hero-btn-outline" href="#mechanical-heart">PLAY MECHANICAL HEART</a>
+            <a class="hero-btn hero-btn-outline" href="mechanical-heart.html">PLAY MECHANICAL HEART</a>
           </div>
         </div>
 
-        <a class="hero-art art-clickable" href="#work" aria-label="Open character art preview"></a>
+        <a class="hero-art" href="#work" aria-label="View featured work"></a>
       </section>
 
       <section id="work" class="featured-panel" aria-label="Featured projects">
@@ -34,8 +34,8 @@
         </header>
 
         <div class="project-grid">
-          <a class="project-card" href="#" id="mechanical-heart" aria-label="Mechanical Heart project">
-            <div class="project-art project-art-heart art-clickable" role="img" aria-label="Mechanical Heart placeholder art" tabindex="0"></div>
+          <a class="project-card" href="mechanical-heart.html" id="mechanical-heart" aria-label="Mechanical Heart project">
+            <div class="project-art project-art-heart" role="img" aria-label="Mechanical Heart placeholder art"></div>
             <div class="project-copy">
               <h3>MECHANICAL HEART</h3>
               <p>Visual Novel | Solo Developer</p>
@@ -44,7 +44,7 @@
           </a>
 
           <a class="project-card" href="#" aria-label="Character and visual development project">
-            <div class="project-art project-art-character art-clickable" role="img" aria-label="Character concept placeholder art" tabindex="0"></div>
+            <div class="project-art project-art-character" role="img" aria-label="Character concept placeholder art"></div>
             <div class="project-copy">
               <h3>CHARACTER &amp; VISUAL DEVELOPMENT</h3>
               <p>Design, Concepts, Iterations</p>
@@ -53,7 +53,7 @@
           </a>
 
           <a class="project-card" href="#" aria-label="UI and motion design project">
-            <div class="project-art project-art-ui art-clickable" role="img" aria-label="UI design placeholder art" tabindex="0"></div>
+            <div class="project-art project-art-ui" role="img" aria-label="UI design placeholder art"></div>
             <div class="project-copy">
               <h3>UI &amp; MOTION DESIGN</h3>
               <p>Menus, Interfaces, Promotional Art</p>
@@ -62,7 +62,7 @@
           </a>
 
           <a class="project-card" href="#" aria-label="Environments and 3D work project">
-            <div class="project-art project-art-env art-clickable" role="img" aria-label="Environment placeholder art" tabindex="0"></div>
+            <div class="project-art project-art-env" role="img" aria-label="Environment placeholder art"></div>
             <div class="project-copy">
               <h3>ENVIRONMENTS &amp; 3D WORK</h3>
               <p>Backgrounds, Props, 3D Assets</p>
@@ -118,75 +118,8 @@
     </footer>
   </div>
 
-  <div class="art-lightbox" id="artLightbox" hidden aria-hidden="true">
-    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close image preview">×</button>
-    <div class="lightbox-stage" id="lightboxStage"></div>
-  </div>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const artLightbox = document.getElementById("artLightbox");
-    const lightboxStage = document.getElementById("lightboxStage");
-    const lightboxClose = document.getElementById("lightboxClose");
-    const clickableArt = document.querySelectorAll(".art-clickable");
-
-    function openArtPreview(sourceEl) {
-      const clone = sourceEl.cloneNode(false);
-      clone.classList.remove("art-clickable");
-      clone.classList.add("lightbox-art");
-      clone.removeAttribute("href");
-      clone.removeAttribute("tabindex");
-      clone.setAttribute("aria-label", "Close image preview");
-
-      clone.addEventListener("click", (event) => {
-        event.preventDefault();
-        closeArtPreview();
-      });
-
-      lightboxStage.innerHTML = "";
-      lightboxStage.appendChild(clone);
-      artLightbox.hidden = false;
-      artLightbox.setAttribute("aria-hidden", "false");
-      document.body.classList.add("lightbox-open");
-    }
-
-    function closeArtPreview() {
-      artLightbox.hidden = true;
-      artLightbox.setAttribute("aria-hidden", "true");
-      lightboxStage.innerHTML = "";
-      document.body.classList.remove("lightbox-open");
-    }
-
-    clickableArt.forEach((art) => {
-      art.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        openArtPreview(art);
-      });
-
-      art.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          event.stopPropagation();
-          openArtPreview(art);
-        }
-      });
-    });
-
-    lightboxClose.addEventListener("click", closeArtPreview);
-
-    artLightbox.addEventListener("click", (event) => {
-      if (event.target === artLightbox) {
-        closeArtPreview();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !artLightbox.hidden) {
-        closeArtPreview();
-      }
-    });
   </script>
 </body>
 </html>
