@@ -7,129 +7,186 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="#">Kenna May</a>
-      <nav class="nav">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <section class="hero">
-      <h1 class="role">Digital Media • Motion Graphics • Illustration</h1>
-      <p class="tagline">
-        Creating visual experiences through motion, design, and digital art.
-        Available for freelance and full-time opportunities.
-      </p>
-<div class="actions">
-  <a class="btn btn-solid" href="portfolio.html">View Portfolio</a>
-  
-  <a class="btn btn-outline" href="resume.pdf" download>Download Resume</a>
-</div>
-
-    </section>
-
-
-    <section id="work" class="section">
-      <div class="section-head">
-        <h2>Selected Work</h2>
-        <p>A showcase of recent projects and creative explorations</p>
-      </div>
-
-      <div class="grid">
-        <a class="card" href="#" aria-label="Mechanical Heart">
-          <div class="thumb">
-            <!-- Replace with your own image -->
-            <img src="thumbs/mechanical-heart.jpg" alt="Mechanical Heart Artwork" />
-          </div>
-          <div class="card-body">
-            <h3>Mechanical Heart</h3>
-            <span>Video game development + Game Design</span>
-          </div>
-        </a>
-
-        <a class="card" href="#" aria-label="Character Design">
-          <div class="thumb">
-            <img src="thumbs/character-design.jpg" alt="Character Art thumbnail" />
-          </div>
-          <div class="card-body">
-            <h3>Character Design</h3>
-            <span>Concept design + development process</span>
-          </div>
-        </a>
-
-        <a class="card" href="#" aria-label="Environment Design">
-          <div class="thumb">
-            <img src="thumbs/environment-design.jpg" alt="Environment Design thumbnail" />
-          </div>
-          <div class="card-body">
-            <h3>Environment Design</h3>
-            <span>3D + compositing</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      
-      <div class="section-head">
-        <h2>About</h2>
-        <p>
-          Kenna May is a visual development artist with an emphasis on character and environment design for story driven projects.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-glow" aria-hidden="true"></div>
-
-    <div class="container footer-top">
-      <section class="footer-about-card" aria-label="About Kenna May">
-        <div class="footer-portrait" role="img" aria-label="Placeholder portrait image"></div>
-
-        <div class="footer-about-copy">
-          <h3>ABOUT ME</h3>
+  <div class="site-shell">
+    <main class="container">
+      <section class="hero-panel" id="about">
+        <div class="hero-copy">
+          <h1>KENNA MAY</h1>
+          <h2>GAME ARTIST &amp; MULTIMEDIA DESIGNER</h2>
           <p>
-            I'm a game artist and multimedia designer with a passion for gothic and
-            story-driven worlds. I enjoy creating cohesive visual experiences from
-            early concepts to final implementation.
+            I create characters, environments, UI, and motion graphics for
+            narrative and atmospheric games.
           </p>
-          <a class="footer-more" href="#about">MORE ABOUT ME <span aria-hidden="true">→</span></a>
+
+          <div class="hero-actions">
+            <a class="hero-btn hero-btn-solid" href="#work">VIEW MY WORK</a>
+            <a class="hero-btn hero-btn-outline" href="#mechanical-heart">PLAY MECHANICAL HEART</a>
+          </div>
         </div>
+
+        <a class="hero-art art-clickable" href="#work" aria-label="Open character art preview"></a>
       </section>
 
-      <section class="footer-connect-card" id="contact" aria-label="Contact and social links">
-        <div class="footer-contact-copy">
-          <h3>LET'S CONNECT</h3>
-          <p>Interested in working together?</p>
-          <a class="footer-cta" href="mailto:kennamayphone@gmail.com">GET IN TOUCH</a>
+      <section id="work" class="featured-panel" aria-label="Featured projects">
+        <header class="featured-head">
+          <h2>FEATURED WORK</h2>
+          <span class="featured-divider" aria-hidden="true">✦</span>
+        </header>
+
+        <div class="project-grid">
+          <a class="project-card" href="#" id="mechanical-heart" aria-label="Mechanical Heart project">
+            <div class="project-art project-art-heart art-clickable" role="img" aria-label="Mechanical Heart placeholder art" tabindex="0"></div>
+            <div class="project-copy">
+              <h3>MECHANICAL HEART</h3>
+              <p>Visual Novel | Solo Developer</p>
+              <span>View Case Study <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" aria-label="Character and visual development project">
+            <div class="project-art project-art-character art-clickable" role="img" aria-label="Character concept placeholder art" tabindex="0"></div>
+            <div class="project-copy">
+              <h3>CHARACTER &amp; VISUAL DEVELOPMENT</h3>
+              <p>Design, Concepts, Iterations</p>
+              <span>View Project <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" aria-label="UI and motion design project">
+            <div class="project-art project-art-ui art-clickable" role="img" aria-label="UI design placeholder art" tabindex="0"></div>
+            <div class="project-copy">
+              <h3>UI &amp; MOTION DESIGN</h3>
+              <p>Menus, Interfaces, Promotional Art</p>
+              <span>View Project <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" aria-label="Environments and 3D work project">
+            <div class="project-art project-art-env art-clickable" role="img" aria-label="Environment placeholder art" tabindex="0"></div>
+            <div class="project-copy">
+              <h3>ENVIRONMENTS &amp; 3D WORK</h3>
+              <p>Backgrounds, Props, 3D Assets</p>
+              <span>View Project <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
         </div>
 
-        <div class="footer-icons" aria-label="Social links">
-          <a class="footer-icon" href="https://www.deviantart.com/pyreee" target="_blank" rel="noopener" aria-label="DeviantArt">DA</a>
-          <a class="footer-icon" href="https://x.com" target="_blank" rel="noopener" aria-label="X">X</a>
-          <a class="footer-icon" href="https://www.instagram.com/black.cat.psd" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-          <a class="footer-icon" href="mailto:kennamayphone@gmail.com" aria-label="Email">@</a>
+        <div class="projects-cta-wrap">
+          <a class="projects-cta" href="#">VIEW ALL PROJECTS</a>
         </div>
       </section>
-    </div>
+    </main>
 
-    <div class="container footer-bottom">
-      <p>© <span id="year"></span> Kenna May. All rights reserved.</p>
-      <div class="footer-mark" aria-label="Kenna May monogram">KM</div>
-    </div>
-  </footer>
+    <footer class="site-footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+
+      <div class="container footer-top">
+        <section class="footer-about-card" aria-label="About Kenna May">
+          <div class="footer-portrait" role="img" aria-label="Placeholder portrait image"></div>
+
+          <div class="footer-about-copy">
+            <h3>ABOUT ME</h3>
+            <p>
+              I'm a game artist and multimedia designer with a passion for gothic and
+              story-driven worlds. I enjoy creating cohesive visual experiences from
+              early concepts to final implementation.
+            </p>
+            <a class="footer-more" href="#about">MORE ABOUT ME <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
+        <section class="footer-connect-card" id="contact" aria-label="Contact and social links">
+          <div class="footer-contact-copy">
+            <h3>LET'S CONNECT</h3>
+            <p>Interested in working together?</p>
+            <a class="footer-cta" href="mailto:kennamayphone@gmail.com">GET IN TOUCH</a>
+          </div>
+
+          <div class="footer-icons" aria-label="Social links">
+            <a class="footer-icon" href="https://www.deviantart.com/pyreee" target="_blank" rel="noopener" aria-label="DeviantArt">DA</a>
+            <a class="footer-icon" href="https://x.com" target="_blank" rel="noopener" aria-label="X">X</a>
+            <a class="footer-icon" href="https://www.instagram.com/black.cat.psd" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a class="footer-icon" href="mailto:kennamayphone@gmail.com" aria-label="Email">@</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Kenna May. All rights reserved.</p>
+        <div class="footer-mark" aria-label="Kenna May monogram">KM</div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="art-lightbox" id="artLightbox" hidden aria-hidden="true">
+    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close image preview">×</button>
+    <div class="lightbox-stage" id="lightboxStage"></div>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const artLightbox = document.getElementById("artLightbox");
+    const lightboxStage = document.getElementById("lightboxStage");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const clickableArt = document.querySelectorAll(".art-clickable");
+
+    function openArtPreview(sourceEl) {
+      const clone = sourceEl.cloneNode(false);
+      clone.classList.remove("art-clickable");
+      clone.classList.add("lightbox-art");
+      clone.removeAttribute("href");
+      clone.removeAttribute("tabindex");
+      clone.setAttribute("aria-label", "Close image preview");
+
+      clone.addEventListener("click", (event) => {
+        event.preventDefault();
+        closeArtPreview();
+      });
+
+      lightboxStage.innerHTML = "";
+      lightboxStage.appendChild(clone);
+      artLightbox.hidden = false;
+      artLightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-open");
+    }
+
+    function closeArtPreview() {
+      artLightbox.hidden = true;
+      artLightbox.setAttribute("aria-hidden", "true");
+      lightboxStage.innerHTML = "";
+      document.body.classList.remove("lightbox-open");
+    }
+
+    clickableArt.forEach((art) => {
+      art.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        openArtPreview(art);
+      });
+
+      art.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          event.stopPropagation();
+          openArtPreview(art);
+        }
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeArtPreview);
+
+    artLightbox.addEventListener("click", (event) => {
+      if (event.target === artLightbox) {
+        closeArtPreview();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !artLightbox.hidden) {
+        closeArtPreview();
+      }
+    });
   </script>
 </body>
 </html>
