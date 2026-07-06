@@ -166,6 +166,7 @@
             constraint. His attire and mannerisms communicate control, 
             while the damaged mechanical parts hint that beneath it all, the performance is unstable. Or falling apart.
           </p>
+          <a class="showcase-more" href="character-design.html">View more</a>
         </article>
 
         <article class="showcase-block">
@@ -205,26 +206,28 @@
             character sprites and concentrated important props around exploration
             points.
           </p>
+          <a class="showcase-more" href="environment-design.html">View more</a>
         </article>
       </section>
 
       <section class="final-panels" aria-label="Implementation and production summary">
         <div class="final-grid">
           <article class="final-card">
-            <h2>UI &amp; PLAYER EXPERIENCE</h2>
+            <h2>UI &amp; UX DESIGN</h2>
             <div class="final-thumb final-thumb-ui" role="img" aria-label="UI and player experience placeholder"></div>
             <p>
-              The interface uses restrained mechanical ornamentation so that key
-              prompts and dialogue controls remain visible over dark backgrounds.
+              A restrained mechanical UI keeps dialogue and player controls clear
+              over dark backgrounds.
             </p>
+            <a class="showcase-more" href="ui-motion-design.html">View more</a>
           </article>
 
           <article class="final-card">
             <h2>IMPLEMENTATION</h2>
             <div class="final-thumb final-thumb-impl" role="img" aria-label="Implementation script placeholder"></div>
             <p>
-              Implemented scene logic, dialogue choices, audio cues, character
-              positioning, text effects, and transitions in Ren'Py. 
+              Built scene logic, branching dialogue, audio cues, editing,
+              sound effects, and transitions in Ren'Py.
             </p>
           </article>
 
@@ -234,14 +237,14 @@
               <span>Script Writing</span>
               <span>Thumbnails</span>
               <span>Asset Production</span>
+              <span>Editing &amp; SFX</span>
               <span>Playtesting</span>
               <span>Implementation</span>
               <span>Export</span>
             </div>
             <p>
-              I keep a simple pipeline process. Keeping a list to manage size,
-              assets, and naming hierarchies. All in an effort to keep the project
-              organized and future proof.
+              A simple tracked pipeline keeps scope, assets, and naming
+              organized from concept to export.
             </p>
           </article>
         </div>
@@ -260,11 +263,96 @@
         </article>
 
         <nav class="project-pager" aria-label="Project navigation">
-          <a href="#" aria-label="Previous project">&larr; PREV PROJECT</a>
-          <a href="#" aria-label="Next project">NEXT PROJECT &rarr;</a>
+          <a href="index.html" aria-label="Back">&larr; BACK</a>
+          <a href="#" aria-label="Next">NEXT &rarr;</a>
         </nav>
       </section>
     </main>
   </div>
+
+  <div class="lightbox" id="art-lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Artwork preview">
+      <div class="lightbox-head">
+        <p class="lightbox-title" id="lightbox-title">Artwork preview</p>
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close preview">CLOSE</button>
+      </div>
+      <div class="lightbox-preview" id="lightbox-preview" role="img" aria-label="Preview image"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const selectors = [
+        ".hero-art",
+        ".gallery-image",
+        ".direction-moodboard",
+        ".process-thumb",
+        ".final-thumb"
+      ].join(", ");
+
+      const triggers = Array.from(document.querySelectorAll(selectors));
+      const lightbox = document.getElementById("art-lightbox");
+      const preview = document.getElementById("lightbox-preview");
+      const title = document.getElementById("lightbox-title");
+      const closeBtn = document.getElementById("lightbox-close");
+      let lastTrigger = null;
+
+      function openLightbox(element) {
+        const computed = window.getComputedStyle(element);
+        const label = element.getAttribute("aria-label") || "Artwork preview";
+
+        preview.style.background = computed.background;
+        title.textContent = label;
+        preview.setAttribute("aria-label", label);
+
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+
+        if (lastTrigger) {
+          lastTrigger.focus();
+        }
+      }
+
+      triggers.forEach(function (item) {
+        item.classList.add("image-pop-trigger");
+        item.tabIndex = 0;
+        item.setAttribute("aria-haspopup", "dialog");
+
+        item.addEventListener("click", function () {
+          lastTrigger = item;
+          openLightbox(item);
+        });
+
+        item.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            lastTrigger = item;
+            openLightbox(item);
+          }
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
