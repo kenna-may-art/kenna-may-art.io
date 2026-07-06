@@ -109,7 +109,12 @@ body {
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   font-weight: 700;
-  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease, background 180ms ease;
+  transition:
+    border-color 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hero-btn:hover {
@@ -117,13 +122,38 @@ body {
 }
 
 .hero-btn-solid {
+  position: relative;
+  overflow: hidden;
   border: 1px solid #9f352f;
   background: linear-gradient(180deg, #9f352f, #7d231f);
   color: #f9ede2;
+  box-shadow: 0 8px 18px rgba(105, 28, 23, 0.34);
+}
+
+.hero-btn-solid::before {
+  content: "";
+  position: absolute;
+  top: -140%;
+  left: -30%;
+  width: 48%;
+  height: 320%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 237, 208, 0.34) 44%, transparent 78%);
+  transform: translateX(-140%) rotate(12deg);
+  transition: transform 620ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .hero-btn-solid:hover {
   background: linear-gradient(180deg, #b2413a, #8a2924);
+  box-shadow: 0 12px 24px rgba(130, 42, 35, 0.45), 0 0 0 1px rgba(240, 207, 156, 0.2) inset;
+}
+
+.hero-btn-solid:hover::before {
+  transform: translateX(320%) rotate(12deg);
+}
+
+.hero-btn-solid:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(88, 23, 19, 0.4);
 }
 
 .hero-btn-outline {
@@ -478,6 +508,127 @@ body {
   letter-spacing: 0.08em;
 }
 
+.about-page {
+  padding: 26px 24px 34px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(23, 16, 15, 0.28), rgba(11, 15, 22, 0.2));
+}
+
+.about-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #d9c6a5;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  border: 1px solid #5f4b36;
+  padding: 9px 12px;
+  background: rgba(11, 15, 22, 0.75);
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.about-back:hover {
+  transform: translateY(-2px);
+  border-color: #b09267;
+  color: #f0d9b3;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) minmax(320px, 1fr);
+  gap: 20px;
+  border: 1px solid #4b3a2a;
+  background: linear-gradient(180deg, rgba(16, 22, 33, 0.96), rgba(10, 14, 21, 0.96));
+  padding: 18px;
+}
+
+.about-portrait {
+  min-height: 320px;
+  border: 1px solid #56412f;
+  background:
+    radial-gradient(circle at 60% 28%, rgba(216, 175, 117, 0.25), transparent 55%),
+    radial-gradient(circle at 34% 62%, rgba(133, 41, 36, 0.22), transparent 58%),
+    linear-gradient(145deg, #1d212c, #101521 52%, #0b1018 100%);
+  position: relative;
+}
+
+.about-portrait::after {
+  content: "KENNA MAY";
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  letter-spacing: 0.18em;
+  font-size: 0.64rem;
+  color: rgba(220, 196, 160, 0.8);
+}
+
+.about-copy h1 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.7rem, 3.8vw, 2.5rem);
+  letter-spacing: 0.05em;
+  color: #e4d7c0;
+  font-weight: 600;
+}
+
+.about-copy h2 {
+  margin-top: 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.1rem, 2.3vw, 1.45rem);
+  letter-spacing: 0.05em;
+  color: #cfbe9f;
+  font-weight: 600;
+}
+
+.about-copy p {
+  margin-top: 14px;
+  color: #c0b6a5;
+  max-width: 58ch;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.about-list {
+  margin-top: 16px;
+  padding-left: 18px;
+  color: #cdbfa7;
+}
+
+.about-list li {
+  margin-top: 8px;
+}
+
+.about-links {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  border: 1px solid #736048;
+  color: #dbc8aa;
+  background: rgba(8, 12, 20, 0.7);
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.about-link:hover {
+  transform: translateY(-2px);
+  border-color: #b09267;
+  color: #f0d9b3;
+}
+
 @media (max-width: 900px) {
   .hero-panel {
     grid-template-columns: 1fr;
@@ -518,5 +669,13 @@ body {
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    min-height: 240px;
   }
 }

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Kenna May</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <main class="container">
+      <section class="about-page" aria-label="About Kenna May">
+        <a class="about-back" href="index.html#about" aria-label="Back to portfolio">← BACK TO PORTFOLIO</a>
+
+        <div class="about-grid">
+          <div class="about-portrait" role="img" aria-label="Portrait placeholder"></div>
+
+          <div class="about-copy">
+            <h1>ABOUT ME</h1>
+            <h2>MULTIMEDIA DESIGNER &amp; GAME ARTIST</h2>
+
+            <p>
+              I am Kenna May, a multimedia designer who enjoys building visual identities for
+              story-driven projects. My work blends illustration, UI design, and motion to
+              create cohesive game experiences from concept through final polish.
+            </p>
+
+            <p>
+              I especially enjoy designing characters and interfaces that support worldbuilding,
+              emotion, and gameplay clarity. Whether I am creating key art, in-game assets, or
+              promotional visuals, I focus on readability, atmosphere, and personality.
+            </p>
+
+            <ul class="about-list" aria-label="Primary creative focus">
+              <li>Character concepting and visual development</li>
+              <li>UI design for menus, HUD systems, and narrative screens</li>
+              <li>Motion graphics and polished presentation assets</li>
+            </ul>
+
+            <div class="about-links">
+              <a class="about-link" href="index.html#work">VIEW FEATURED WORK</a>
+              <a class="about-link" href="mailto:kennamayphone@gmail.com">CONTACT ME</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Kenna May. All rights reserved.</p>
+        <div class="footer-mark" aria-label="Kenna May monogram">KM</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
