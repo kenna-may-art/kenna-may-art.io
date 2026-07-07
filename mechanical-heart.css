@@ -195,10 +195,13 @@ body {
 .hero-art {
   border-left: 1px solid var(--line);
   background:
+    url('Images/mech%20heart%202.png'),
     linear-gradient(to left, rgba(7, 9, 14, 0.1), rgba(7, 9, 14, 0.7)),
     radial-gradient(circle at 61% 20%, rgba(198, 167, 116, 0.28), transparent 52%),
     radial-gradient(circle at 34% 40%, rgba(131, 34, 29, 0.2), transparent 60%),
-    linear-gradient(142deg, #282118, #191922 52%, #101722);
+    linear-gradient(142deg, rgba(40, 33, 24, 0.55), rgba(25, 25, 34, 0.72) 52%, rgba(16, 23, 34, 0.82));
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
@@ -646,7 +649,10 @@ body {
 .final-thumb-impl {
   background:
     radial-gradient(circle at 37% 38%, rgba(133, 37, 31, 0.25), transparent 56%),
-    linear-gradient(145deg, #201916, #171a24 56%, #131a25);
+    linear-gradient(145deg, #201916, #171a24 56%, #131a25),
+    url('Images/implementation.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .final-card p {
@@ -798,17 +804,18 @@ body {
 }
 
 .trailer-dialog {
-  width: min(980px, 96vw);
+  width: min(1060px, 96vw);
 }
 
 .trailer-popup-frame {
-  margin: 14px;
-  width: calc(100% - 28px);
+  margin: 14px auto;
+  width: min(920px, calc(100% - 28px));
 }
 
 .trailer-popup-frame iframe {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   border: 1px solid #50402c;
   background: #020304;
