@@ -150,19 +150,6 @@ body {
   justify-content: center;
 }
 
-.itch-widget-wrap {
-  margin: 14px auto 0;
-  display: block;
-  width: fit-content;
-  border: 1px solid #5f4a33;
-  background: rgba(8, 12, 19, 0.9);
-  padding: 6px;
-}
-
-.itch-widget-wrap iframe {
-  display: block;
-}
-
 .btn {
   appearance: none;
   display: inline-flex;
@@ -845,11 +832,6 @@ body.no-scroll {
     min-height: 360px;
     border-left: 0;
     border-top: 1px solid var(--line);
-  }
-
-  .itch-widget-wrap iframe {
-    width: min(100%, 340px);
-    max-width: 100%;
   }
 
   .gallery {
