@@ -149,6 +149,18 @@ body {
   gap: 12px;
 }
 
+.itch-widget-wrap {
+  margin-top: 14px;
+  display: inline-block;
+  border: 1px solid #5f4a33;
+  background: rgba(8, 12, 19, 0.9);
+  padding: 6px;
+}
+
+.itch-widget-wrap iframe {
+  display: block;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -213,6 +225,34 @@ body {
   color: rgba(223, 197, 156, 0.78);
   letter-spacing: 0.16em;
   font-size: 0.74rem;
+}
+
+.trailer-section {
+  padding: 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(15, 11, 12, 0.55), rgba(10, 13, 19, 0.75));
+}
+
+.trailer-section h2 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  color: #dfceb3;
+  letter-spacing: 0.04em;
+}
+
+.trailer-embed {
+  margin-top: 10px;
+  border: 1px solid #5a452d;
+  background: rgba(7, 11, 17, 0.9);
+  padding: 8px;
+}
+
+.trailer-embed iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
 }
 
 .image-pop-trigger {
@@ -811,6 +851,11 @@ body.no-scroll {
     min-height: 360px;
     border-left: 0;
     border-top: 1px solid var(--line);
+  }
+
+  .itch-widget-wrap iframe {
+    width: min(100%, 340px);
+    max-width: 100%;
   }
 
   .gallery {
