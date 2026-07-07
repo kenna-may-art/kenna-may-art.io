@@ -265,33 +265,33 @@ body {
 
 .project-art-heart {
   background:
-    radial-gradient(circle at 32% 42%, rgba(122, 37, 31, 0.48), transparent 52%),
-    linear-gradient(150deg, #25171a, #0f131d 55%, #0c1118);
+    url('Images/mech%20heart%202.png'),
+    radial-gradient(circle at 32% 42%, rgba(122, 37, 31, 0.34), transparent 52%),
+    linear-gradient(150deg, rgba(37, 23, 26, 0.34), rgba(15, 19, 29, 0.56) 55%, rgba(12, 17, 24, 0.72));
+  background-size: cover;
+  background-position: center;
 }
 
 .project-art-character {
-  background-image:
-    linear-gradient(160deg, rgba(196, 182, 160, 0.85), rgba(129, 118, 103, 0.82)),
-    repeating-linear-gradient(to right, rgba(48, 42, 36, 0.2) 0, rgba(48, 42, 36, 0.2) 1px, transparent 1px, transparent 28px),
-    url('Images/caster%20expressions%20sheet.png');
+  background-image: url('Images/caster%20expressions%20sheet.png');
   background-size: cover;
   background-position: 59% center;
 }
 
 .project-art-ui {
   background-image:
-    radial-gradient(circle at 72% 35%, rgba(154, 120, 68, 0.26), transparent 55%),
-    linear-gradient(130deg, #1b1920, #0f141d 50%, #1b130f),
-    url('Images/collector%20.png');
+    url('Images/motiongraphic.png'),
+    radial-gradient(circle at 72% 35%, rgba(154, 120, 68, 0.2), transparent 55%),
+    linear-gradient(130deg, rgba(27, 25, 32, 0.32), rgba(15, 20, 29, 0.5) 50%, rgba(27, 19, 15, 0.62));
   background-size: cover;
   background-position: center;
 }
 
 .project-art-env {
   background-image:
+    url('Images/walk_bg_pb.png'),
     radial-gradient(circle at 42% 44%, rgba(201, 154, 90, 0.24), transparent 50%),
-    linear-gradient(140deg, #2a2017, #16161a 55%, #121927),
-    url('Images/wide_alley(1).png');
+    linear-gradient(140deg, rgba(42, 32, 23, 0.34), rgba(22, 22, 26, 0.56) 55%, rgba(18, 25, 39, 0.66));
   background-size: cover;
   background-position: center;
 }

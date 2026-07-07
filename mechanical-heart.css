@@ -642,15 +642,18 @@ body {
 
 .final-thumb-ui {
   background:
-    radial-gradient(circle at 65% 40%, rgba(194, 155, 95, 0.18), transparent 52%),
-    linear-gradient(145deg, #2a2019, #171a22 58%, #131b27);
+    url('Images/motiongraphic.png'),
+    radial-gradient(circle at 65% 40%, rgba(194, 155, 95, 0.16), transparent 52%),
+    linear-gradient(145deg, rgba(42, 32, 25, 0.34), rgba(23, 26, 34, 0.52) 58%, rgba(19, 27, 39, 0.64));
+  background-size: cover;
+  background-position: center;
 }
 
 .final-thumb-impl {
   background:
+    url('Images/implementation.png'),
     radial-gradient(circle at 37% 38%, rgba(133, 37, 31, 0.25), transparent 56%),
-    linear-gradient(145deg, #201916, #171a24 56%, #131a25),
-    url('Images/implementation.png');
+    linear-gradient(145deg, rgba(32, 25, 22, 0.42), rgba(23, 26, 36, 0.58) 56%, rgba(19, 26, 37, 0.66));
   background-size: cover;
   background-position: center;
 }
