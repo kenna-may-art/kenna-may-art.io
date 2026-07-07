@@ -273,9 +273,9 @@ body {
   background-image:
     linear-gradient(160deg, rgba(196, 182, 160, 0.85), rgba(129, 118, 103, 0.82)),
     repeating-linear-gradient(to right, rgba(48, 42, 36, 0.2) 0, rgba(48, 42, 36, 0.2) 1px, transparent 1px, transparent 28px),
-    url('Images/caster%20comparison%20.png');
+    url('Images/caster%20expressions%20sheet.png');
   background-size: cover;
-  background-position: center;
+  background-position: 59% center;
 }
 
 .project-art-ui {
@@ -1208,6 +1208,11 @@ body {
 
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-art-character {
+    background-size: 125% auto;
+    background-position: 50% 18%;
   }
 
   .footer-about-card {
