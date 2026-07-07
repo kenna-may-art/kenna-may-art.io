@@ -50,7 +50,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-solid" href="#">PLAY THE DEMO</a>
-            <a class="btn btn-outline" href="#trailer">WATCH TRAILER</a>
+            <button class="btn btn-outline" id="watch-trailer-btn" type="button">WATCH TRAILER</button>
           </div>
 
           <div class="itch-widget-wrap" aria-label="Mechanical Heart game widget">
@@ -67,22 +67,6 @@
         </div>
 
         <div class="hero-art" role="img" aria-label="Mechanical Heart character key art placeholder"></div>
-      </section>
-
-      <section class="trailer-section" id="trailer" aria-label="Mechanical Heart trailer">
-        <h2>OFFICIAL TRAILER</h2>
-        <div class="trailer-embed">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/zrllM4XvoBc?si=YkF4heZFQUiZaZIV"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
       </section>
 
       <section class="gallery" aria-label="Project gallery" id="characters">
@@ -298,6 +282,29 @@
     </main>
   </div>
 
+  <div class="lightbox" id="trailer-lightbox" aria-hidden="true">
+    <div class="lightbox-dialog trailer-dialog" role="dialog" aria-modal="true" aria-label="Mechanical Heart trailer">
+      <div class="lightbox-head">
+        <p class="lightbox-title">Mechanical Heart Trailer</p>
+        <button class="lightbox-close" id="trailer-close" type="button" aria-label="Close trailer">CLOSE</button>
+      </div>
+      <div class="trailer-popup-frame">
+        <iframe
+          id="trailer-iframe"
+          width="560"
+          height="315"
+          src=""
+          data-src="https://www.youtube.com/embed/zrllM4XvoBc?si=YkF4heZFQUiZaZIV"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
   <div class="lightbox" id="art-lightbox" aria-hidden="true">
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Artwork preview">
       <div class="lightbox-head">
@@ -323,7 +330,24 @@
       const preview = document.getElementById("lightbox-preview");
       const title = document.getElementById("lightbox-title");
       const closeBtn = document.getElementById("lightbox-close");
+      const trailerTrigger = document.getElementById("watch-trailer-btn");
+      const trailerLightbox = document.getElementById("trailer-lightbox");
+      const trailerCloseBtn = document.getElementById("trailer-close");
+      const trailerIframe = document.getElementById("trailer-iframe");
       let lastTrigger = null;
+
+      function updateScrollLock() {
+        const hasOpenModal =
+          lightbox.classList.contains("is-open") ||
+          trailerLightbox.classList.contains("is-open");
+
+        if (hasOpenModal) {
+          document.body.classList.add("no-scroll");
+          return;
+        }
+
+        document.body.classList.remove("no-scroll");
+      }
 
       function openLightbox(element) {
         const computed = window.getComputedStyle(element);
@@ -335,17 +359,32 @@
 
         lightbox.classList.add("is-open");
         lightbox.setAttribute("aria-hidden", "false");
-        document.body.classList.add("no-scroll");
+        updateScrollLock();
       }
 
       function closeLightbox() {
         lightbox.classList.remove("is-open");
         lightbox.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("no-scroll");
+        updateScrollLock();
 
         if (lastTrigger) {
           lastTrigger.focus();
         }
+      }
+
+      function openTrailer() {
+        trailerIframe.src = trailerIframe.dataset.src;
+        trailerLightbox.classList.add("is-open");
+        trailerLightbox.setAttribute("aria-hidden", "false");
+        updateScrollLock();
+      }
+
+      function closeTrailer() {
+        trailerLightbox.classList.remove("is-open");
+        trailerLightbox.setAttribute("aria-hidden", "true");
+        trailerIframe.src = "";
+        updateScrollLock();
+        trailerTrigger.focus();
       }
 
       triggers.forEach(function (item) {
@@ -368,6 +407,8 @@
       });
 
       closeBtn.addEventListener("click", closeLightbox);
+      trailerTrigger.addEventListener("click", openTrailer);
+      trailerCloseBtn.addEventListener("click", closeTrailer);
 
       lightbox.addEventListener("click", function (event) {
         if (event.target === lightbox) {
@@ -375,8 +416,23 @@
         }
       });
 
+      trailerLightbox.addEventListener("click", function (event) {
+        if (event.target === trailerLightbox) {
+          closeTrailer();
+        }
+      });
+
       document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+        if (event.key !== "Escape") {
+          return;
+        }
+
+        if (trailerLightbox.classList.contains("is-open")) {
+          closeTrailer();
+          return;
+        }
+
+        if (lightbox.classList.contains("is-open")) {
           closeLightbox();
         }
       });
