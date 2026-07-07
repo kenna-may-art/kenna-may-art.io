@@ -170,11 +170,14 @@ body {
 .hero-art {
   display: block;
   border-left: 1px solid var(--line);
-  background:
+  background-image:
     linear-gradient(to left, rgba(6, 9, 14, 0.05), rgba(6, 9, 14, 0.7)),
     radial-gradient(circle at 58% 30%, rgba(206, 169, 113, 0.26), transparent 56%),
     radial-gradient(circle at 28% 36%, rgba(123, 33, 27, 0.18), transparent 58%),
-    linear-gradient(140deg, #1b202b, #0c121b 40%, #090d13 100%);
+    linear-gradient(140deg, #1b202b, #0c121b 40%, #090d13 100%),
+    url('Images/cozy%20bedroom%20rough(1).jpg');
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
@@ -267,21 +270,30 @@ body {
 }
 
 .project-art-character {
-  background:
+  background-image:
     linear-gradient(160deg, rgba(196, 182, 160, 0.85), rgba(129, 118, 103, 0.82)),
-    repeating-linear-gradient(to right, rgba(48, 42, 36, 0.2) 0, rgba(48, 42, 36, 0.2) 1px, transparent 1px, transparent 28px);
+    repeating-linear-gradient(to right, rgba(48, 42, 36, 0.2) 0, rgba(48, 42, 36, 0.2) 1px, transparent 1px, transparent 28px),
+    url('Images/caster%20comparison%20.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .project-art-ui {
-  background:
+  background-image:
     radial-gradient(circle at 72% 35%, rgba(154, 120, 68, 0.26), transparent 55%),
-    linear-gradient(130deg, #1b1920, #0f141d 50%, #1b130f);
+    linear-gradient(130deg, #1b1920, #0f141d 50%, #1b130f),
+    url('Images/collector%20.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .project-art-env {
-  background:
+  background-image:
     radial-gradient(circle at 42% 44%, rgba(201, 154, 90, 0.24), transparent 50%),
-    linear-gradient(140deg, #2a2017, #16161a 55%, #121927);
+    linear-gradient(140deg, #2a2017, #16161a 55%, #121927),
+    url('Images/wide_alley(1).png');
+  background-size: cover;
+  background-position: center;
 }
 
 .project-copy {
@@ -384,9 +396,12 @@ body {
   width: 124px;
   aspect-ratio: 4 / 5;
   border: 1px solid #4f412d;
-  background:
+  background-image:
     linear-gradient(160deg, rgba(34, 38, 50, 0.95), rgba(16, 19, 28, 0.95)),
-    radial-gradient(circle at 35% 28%, rgba(213, 177, 126, 0.25), transparent 55%);
+    radial-gradient(circle at 35% 28%, rgba(213, 177, 126, 0.25), transparent 55%),
+    url('Images/casexplain.png');
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
@@ -710,28 +725,40 @@ body {
 }
 
 .character-art-concepts {
-  background:
+  background-image:
     radial-gradient(circle at 30% 42%, rgba(142, 45, 40, 0.38), transparent 54%),
-    linear-gradient(150deg, #2a1f1f, #131824 56%, #101620);
+    linear-gradient(150deg, #2a1f1f, #131824 56%, #101620),
+    url('Images/caster%20comparison%20.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .character-art-silhouette {
-  background:
+  background-image:
     radial-gradient(circle at 68% 35%, rgba(204, 165, 101, 0.23), transparent 52%),
-    linear-gradient(135deg, #1b1f2a, #101620 58%, #17110f);
+    linear-gradient(135deg, #1b1f2a, #101620 58%, #17110f),
+    url('Images/casneutral.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .character-art-expression {
-  background:
+  background-image:
     radial-gradient(circle at 42% 58%, rgba(118, 155, 198, 0.2), transparent 56%),
-    linear-gradient(140deg, #1a2230, #111926 58%, #12161f);
+    linear-gradient(140deg, #1a2230, #111926 58%, #12161f),
+    url('Images/caster%20expressions%20sheet(2).png');
+  background-size: cover;
+  background-position: center;
 }
 
 .character-art-final {
-  background:
+  background-image:
     radial-gradient(circle at 62% 30%, rgba(214, 176, 116, 0.27), transparent 52%),
     radial-gradient(circle at 28% 68%, rgba(128, 40, 34, 0.24), transparent 58%),
-    linear-gradient(145deg, #27211b, #131923 56%, #101721);
+    linear-gradient(145deg, #27211b, #131923 56%, #101721),
+    url('Images/casexplain.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .character-card h2 {
@@ -885,27 +912,39 @@ body {
 }
 
 .environment-art-thumb {
-  background:
+  background-image:
     linear-gradient(165deg, rgba(170, 165, 158, 0.82), rgba(86, 88, 94, 0.85)),
-    repeating-linear-gradient(to right, rgba(32, 34, 39, 0.24) 0, rgba(32, 34, 39, 0.24) 1px, transparent 1px, transparent 18px);
+    repeating-linear-gradient(to right, rgba(32, 34, 39, 0.24) 0, rgba(32, 34, 39, 0.24) 1px, transparent 1px, transparent 18px),
+    url('Images/wide_alley(1).png');
+  background-size: cover;
+  background-position: center;
 }
 
 .environment-art-value {
-  background:
+  background-image:
     linear-gradient(160deg, rgba(156, 147, 132, 0.84), rgba(73, 76, 86, 0.85)),
-    repeating-linear-gradient(to right, rgba(35, 36, 42, 0.24) 0, rgba(35, 36, 42, 0.24) 1px, transparent 1px, transparent 20px);
+    repeating-linear-gradient(to right, rgba(35, 36, 42, 0.24) 0, rgba(35, 36, 42, 0.24) 1px, transparent 1px, transparent 20px),
+    url('Images/scene_outside_ashcog(2).png');
+  background-size: cover;
+  background-position: center;
 }
 
 .environment-art-final {
-  background:
+  background-image:
     radial-gradient(circle at 52% 40%, rgba(195, 151, 88, 0.27), transparent 52%),
-    linear-gradient(145deg, #2d2318, #161920 56%, #111925);
+    linear-gradient(145deg, #2d2318, #161920 56%, #111925),
+    url('Images/scene_bg_room(1).png');
+  background-size: cover;
+  background-position: center;
 }
 
 .environment-art-ingame {
-  background:
+  background-image:
     radial-gradient(circle at 52% 39%, rgba(200, 156, 92, 0.3), transparent 52%),
-    linear-gradient(145deg, #2e2418, #181a22 58%, #111824);
+    linear-gradient(145deg, #2e2418, #181a22 58%, #111824),
+    url('Images/workshop(1).png');
+  background-size: cover;
+  background-position: center;
 }
 
 .environment-card h2 {
