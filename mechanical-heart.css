@@ -147,11 +147,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .itch-widget-wrap {
-  margin-top: 14px;
-  display: inline-block;
+  margin: 14px auto 0;
+  display: block;
+  width: fit-content;
   border: 1px solid #5f4a33;
   background: rgba(8, 12, 19, 0.9);
   padding: 6px;
