@@ -549,6 +549,14 @@ body {
 .process-thumb {
   min-height: 134px;
   border-top: 0;
+  overflow: hidden;
+}
+
+.process-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .thumb-concepts {
@@ -577,9 +585,13 @@ body {
 }
 
 .env-1 {
-  background:
-    linear-gradient(165deg, rgba(170, 165, 158, 0.82), rgba(86, 88, 94, 0.85)),
-    repeating-linear-gradient(to right, rgba(32, 34, 39, 0.24) 0, rgba(32, 34, 39, 0.24) 1px, transparent 1px, transparent 18px);
+  background: #11161f;
+}
+
+.env-1 img {
+  object-position: center center;
+  transform: scale(1.22);
+  transform-origin: center center;
 }
 
 .env-2 {
@@ -588,10 +600,20 @@ body {
     repeating-linear-gradient(to right, rgba(35, 36, 42, 0.24) 0, rgba(35, 36, 42, 0.24) 1px, transparent 1px, transparent 20px);
 }
 
+.env-2 img {
+  object-position: center top;
+  transform: scale(1.18);
+  transform-origin: center top;
+}
+
 .env-3 {
-  background:
-    radial-gradient(circle at 52% 40%, rgba(195, 151, 88, 0.27), transparent 52%),
-    linear-gradient(145deg, #2d2318, #161920 56%, #111925);
+  background: #111925;
+}
+
+.env-3 img {
+  object-position: center top;
+  transform: scale(1.22);
+  transform-origin: center top;
 }
 
 .env-4 {
