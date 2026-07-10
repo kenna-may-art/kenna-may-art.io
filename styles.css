@@ -1097,9 +1097,7 @@ body {
 }
 
 .ui-art-wireframe {
-  background:
-    linear-gradient(165deg, rgba(161, 166, 175, 0.82), rgba(77, 84, 96, 0.84)),
-    repeating-linear-gradient(to right, rgba(34, 38, 46, 0.24) 0, rgba(34, 38, 46, 0.24) 1px, transparent 1px, transparent 18px);
+  background: #171b26;
 }
 
 .ui-art-style {
@@ -1107,13 +1105,12 @@ body {
 }
 
 .ui-art-style img {
-  object-position: calc(50% + 16px) center;
+  object-position: calc(50% - 3px) center;
+  transform: scale(1.08);
 }
 
 .ui-art-motion {
-  background:
-    radial-gradient(circle at 38% 56%, rgba(116, 148, 190, 0.22), transparent 56%),
-    linear-gradient(140deg, #1d2430, #121a26 58%, #121720);
+  background: #121a26;
 }
 
 .ui-art-final {
