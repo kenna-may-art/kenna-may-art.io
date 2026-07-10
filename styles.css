@@ -749,13 +749,7 @@ body {
 }
 
 .character-art-final {
-  background-image:
-    radial-gradient(circle at 62% 30%, rgba(214, 176, 116, 0.27), transparent 52%),
-    radial-gradient(circle at 28% 68%, rgba(128, 40, 34, 0.24), transparent 58%),
-    linear-gradient(145deg, #27211b, #131923 56%, #101721),
-    url('Images/casexplain.png');
-  background-size: cover;
-  background-position: center;
+  background: #101620;
 }
 
 .character-card h2 {
