@@ -623,9 +623,13 @@ body {
 }
 
 .env-5 {
-  background:
-    radial-gradient(circle at 52% 39%, rgba(153, 36, 32, 0.48), transparent 50%),
-    linear-gradient(145deg, #341312, #190f16 58%, #121722);
+  background: #121722;
+}
+
+.env-5 img {
+  object-position: center top;
+  transform: scale(1.24);
+  transform-origin: center top;
 }
 
 .final-panels {
