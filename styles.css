@@ -722,6 +722,14 @@ body {
 .character-art {
   aspect-ratio: 16 / 10;
   border: 1px solid #3d4860;
+  overflow: hidden;
+}
+
+.character-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .character-art-concepts {
@@ -731,21 +739,13 @@ body {
 }
 
 .character-art-silhouette {
-  background-image:
-    radial-gradient(circle at 68% 35%, rgba(204, 165, 101, 0.23), transparent 52%),
-    linear-gradient(135deg, #1b1f2a, #101620 58%, #17110f),
-    url('Images/casneutral.png');
+  background-image: url('Images/character%20concepts%201%20proto%20silo.png');
   background-size: cover;
   background-position: center;
 }
 
 .character-art-expression {
-  background-image:
-    radial-gradient(circle at 42% 58%, rgba(118, 155, 198, 0.2), transparent 56%),
-    linear-gradient(140deg, #1a2230, #111926 58%, #12161f),
-    url('Images/caster%20expressions%20sheet(2).png');
-  background-size: cover;
-  background-position: center;
+  background: #101620;
 }
 
 .character-art-final {
@@ -1092,6 +1092,14 @@ body {
 .ui-art {
   aspect-ratio: 16 / 10;
   border: 1px solid #3d4860;
+  overflow: hidden;
+}
+
+.ui-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ui-art-wireframe {
@@ -1101,9 +1109,11 @@ body {
 }
 
 .ui-art-style {
-  background:
-    radial-gradient(circle at 65% 34%, rgba(172, 133, 78, 0.25), transparent 52%),
-    linear-gradient(145deg, #242025, #171b26 56%, #17120f);
+  background: #171b26;
+}
+
+.ui-art-style img {
+  object-position: calc(50% + 16px) center;
 }
 
 .ui-art-motion {
