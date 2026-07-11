@@ -255,6 +255,7 @@ body {
 }
 
 .gallery-image-feature {
+  aspect-ratio: 8 / 5;
   min-height: 228px;
   border: 0;
   background:
@@ -262,6 +263,18 @@ body {
     radial-gradient(circle at 73% 32%, rgba(173, 137, 82, 0.18), transparent 48%),
     linear-gradient(145deg, #25231f, #121722 60%, #0f141f);
   position: relative;
+  overflow: hidden;
+}
+
+.gallery-image-feature img {
+  display: block;
+  width: auto;
+  height: 95%;
+  max-width: 95%;
+  object-fit: contain;
+  position: absolute;
+  inset: 0;
+  margin: auto;
 }
 
 .gallery-image-feature::after {
