@@ -319,6 +319,14 @@ body {
 
 .gallery-grid .gallery-image {
   min-height: 108px;
+  overflow: hidden;
+}
+
+.gallery-grid .gallery-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-image-env {
@@ -593,12 +601,14 @@ body {
 }
 
 .thumb-color {
+  height: 134px;
   background:
     radial-gradient(circle at 50% 30%, rgba(195, 152, 92, 0.24), transparent 54%),
     linear-gradient(145deg, #2a211b, #191a22 56%, #151c27);
 }
 
 .thumb-final {
+  height: 134px;
   background:
     radial-gradient(circle at 52% 32%, rgba(195, 152, 92, 0.25), transparent 52%),
     radial-gradient(circle at 34% 45%, rgba(125, 36, 30, 0.24), transparent 58%),
@@ -638,9 +648,15 @@ body {
 }
 
 .env-4 {
+  aspect-ratio: 5 / 3;
   background:
     radial-gradient(circle at 52% 39%, rgba(200, 156, 92, 0.3), transparent 52%),
     linear-gradient(145deg, #2e2418, #181a22 58%, #111824);
+}
+
+.env-4 img {
+  object-fit: contain;
+  object-position: center;
 }
 
 .env-5 {
