@@ -561,14 +561,22 @@ body {
 
 .thumb-concepts {
   background:
+    url('Images/caster_character_concept.png'),
     linear-gradient(160deg, rgba(193, 180, 158, 0.86), rgba(113, 102, 87, 0.82)),
     repeating-linear-gradient(to right, rgba(46, 40, 34, 0.18) 0, rgba(46, 40, 34, 0.18) 1px, transparent 1px, transparent 22px);
+  background-size: 100% 100%, auto, auto;
+  background-position: center, center, center;
+  background-repeat: no-repeat, repeat, repeat;
 }
 
 .thumb-silhouette {
   background:
+    url('Images/caster_silouette.png'),
     linear-gradient(165deg, rgba(200, 191, 174, 0.86), rgba(126, 120, 109, 0.8)),
     repeating-linear-gradient(to right, rgba(52, 49, 45, 0.2) 0, rgba(52, 49, 45, 0.2) 1px, transparent 1px, transparent 20px);
+  background-size: 100% 100%, auto, auto;
+  background-position: center, center, center;
+  background-repeat: no-repeat, repeat, repeat;
 }
 
 .thumb-color {
