@@ -135,11 +135,21 @@
           <div class="showcase-headline-row">
             <h2>CHARACTER DEVELOPMENT</h2>
             <div class="character-tabs" aria-label="Character iteration phases">
-              <span>CASTER</span>
-              <span>PROTO</span>
-              <span>COLLECTOR</span>
+              <button class="character-tab is-active" type="button" data-character="caster" aria-pressed="true">CASTER</button>
+              <button class="character-tab" type="button" data-character="proto" aria-pressed="false">PROTO</button>
+              <button class="character-tab" type="button" data-character="collector" aria-pressed="false">COLLECTOR</button>
             </div>
           </div>
+
+          <figure class="character-tab-panel">
+            <div class="character-tab-art" id="character-tab-art" role="img" aria-label="Caster final sprite concept">
+              <img id="character-tab-image" src="Images/final sprite.png" alt="Caster final sprite concept" />
+            </div>
+            <figcaption>
+              <strong id="character-tab-title">Caster</strong>
+              <span id="character-tab-caption">Final sprite pass used for dialogue scenes and key dramatic beats.</span>
+            </figcaption>
+          </figure>
 
           <div class="process-grid process-grid-four">
             <figure class="process-card">
@@ -326,7 +336,8 @@
         ".gallery-image",
         ".direction-moodboard",
         ".process-thumb",
-        ".final-thumb"
+        ".final-thumb",
+        ".character-tab-art"
       ].join(", ");
 
       const triggers = Array.from(document.querySelectorAll(selectors));
@@ -338,7 +349,53 @@
       const trailerLightbox = document.getElementById("trailer-lightbox");
       const trailerCloseBtn = document.getElementById("trailer-close");
       const trailerIframe = document.getElementById("trailer-iframe");
+      const tabButtons = Array.from(document.querySelectorAll(".character-tab"));
+      const tabImage = document.getElementById("character-tab-image");
+      const tabArt = document.getElementById("character-tab-art");
+      const tabTitle = document.getElementById("character-tab-title");
+      const tabCaption = document.getElementById("character-tab-caption");
       let lastTrigger = null;
+
+      const tabData = {
+        caster: {
+          title: "Caster",
+          caption: "Final sprite pass used for dialogue scenes and key dramatic beats.",
+          src: "Images/final sprite.png",
+          alt: "Caster final sprite concept"
+        },
+        proto: {
+          title: "Proto",
+          caption: "Finalized Proto concept balancing warmth, curiosity, and mechanical fragility.",
+          src: "Images/final proto design.png",
+          alt: "Proto final design concept"
+        },
+        collector: {
+          title: "Collector",
+          caption: "Final collector design focused on sharp silhouette contrast and antique mechanical detailing.",
+          src: "Images/collector designfinal.png",
+          alt: "Collector final character design"
+        }
+      };
+
+      function setCharacterTab(key) {
+        const data = tabData[key];
+
+        if (!data) {
+          return;
+        }
+
+        tabButtons.forEach(function (button) {
+          const isActive = button.dataset.character === key;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+
+        tabImage.src = data.src;
+        tabImage.alt = data.alt;
+        tabArt.setAttribute("aria-label", data.alt);
+        tabTitle.textContent = data.title;
+        tabCaption.textContent = data.caption;
+      }
 
       function updateScrollLock() {
         const hasOpenModal =
@@ -424,6 +481,12 @@
         if (event.target === trailerLightbox) {
           closeTrailer();
         }
+      });
+
+      tabButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setCharacterTab(button.dataset.character);
+        });
       });
 
       document.addEventListener("keydown", function (event) {
