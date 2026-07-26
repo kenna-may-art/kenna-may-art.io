@@ -240,7 +240,7 @@
         <div class="final-grid">
           <article class="final-card">
             <h2>UI &amp; UX DESIGN</h2>
-            <div class="final-thumb final-thumb-ui" role="img" aria-label="UI and player experience placeholder"></div>
+            <div class="final-thumb final-thumb-ui" role="img" aria-label="UI and player experience placeholder" data-lightbox-src="Images/motiongraphic.png"></div>
             <p>
               A simple yet unique UI keeps dialogue and player controls clear
               over dark backgrounds. Keeping the main focus on the game itself.
@@ -250,7 +250,7 @@
 
           <article class="final-card">
             <h2>IMPLEMENTATION</h2>
-            <div class="final-thumb final-thumb-impl" role="img" aria-label="Implementation script placeholder"></div>
+            <div class="final-thumb final-thumb-impl" role="img" aria-label="Implementation script placeholder" data-lightbox-src="Images/implementation.png"></div>
             <p>
               Built scene logic, branching dialogue, audio cues, editing,
               sound effects, and transitions in Ren'Py.
@@ -259,7 +259,7 @@
 
           <article class="final-card">
             <h2>PRODUCTION PROCESS</h2>
-            <div class="pipeline" aria-label="Production process flow">
+            <div class="pipeline" role="img" aria-label="Production process flow" data-lightbox-src="Images/Using3DForDevolopement.png">
               <span>Script Writing</span>
               <span>Thumbnails</span>
               <span>Asset Production</span>
@@ -340,6 +340,7 @@
         ".direction-moodboard",
         ".process-thumb",
         ".final-thumb",
+        ".pipeline",
         ".character-tab-art"
       ].join(", ");
 
@@ -417,11 +418,18 @@
       }
 
       function setLightboxContent(element) {
+        const explicitSource = element.getAttribute("data-lightbox-src");
         const computed = window.getComputedStyle(element);
         const directImage = element.querySelector("img");
         const label = element.getAttribute("aria-label") || "Artwork preview";
 
-        if (directImage && directImage.getAttribute("src")) {
+        if (explicitSource) {
+          preview.style.backgroundImage = "url(\"" + explicitSource + "\")";
+          preview.style.backgroundColor = "#0a0f17";
+          preview.style.backgroundRepeat = "no-repeat";
+          preview.style.backgroundPosition = "center";
+          preview.style.backgroundSize = "contain";
+        } else if (directImage && directImage.getAttribute("src")) {
           preview.style.backgroundImage = "url(\"" + directImage.getAttribute("src") + "\")";
           preview.style.backgroundColor = "#0a0f17";
           preview.style.backgroundRepeat = "no-repeat";
