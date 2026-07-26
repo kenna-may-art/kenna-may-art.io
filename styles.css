@@ -53,13 +53,18 @@ body {
 }
 
 .hero-panel {
-  display: grid;
-  grid-template-columns: minmax(320px, 1fr) 42%;
+  position: relative;
+  display: block;
   min-height: 420px;
   border-bottom: 1px solid var(--line);
+  overflow: hidden;
 }
 
 .hero-copy {
+  position: relative;
+  z-index: 2;
+  width: min(560px, 58%);
+  min-height: 420px;
   padding: 56px 36px;
   display: flex;
   flex-direction: column;
@@ -169,16 +174,14 @@ body {
 
 .hero-art {
   display: block;
-  border-left: 1px solid var(--line);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background-image:
-    linear-gradient(to left, rgba(6, 9, 14, 0.05), rgba(6, 9, 14, 0.7)),
-    radial-gradient(circle at 58% 30%, rgba(206, 169, 113, 0.26), transparent 56%),
-    radial-gradient(circle at 28% 36%, rgba(123, 33, 27, 0.18), transparent 58%),
-    linear-gradient(140deg, #1b202b, #0c121b 40%, #090d13 100%),
-    url('Images/cozy%20bedroom%20rough(1).jpg');
+    linear-gradient(90deg, rgba(5, 7, 11, 0.78) 0%, rgba(5, 7, 11, 0.42) 32%, rgba(5, 7, 11, 0.12) 68%, rgba(5, 7, 11, 0.02) 100%),
+    url('Images/Untitled-1.png');
   background-size: cover;
-  background-position: center;
-  position: relative;
+  background-position: center right;
 }
 
 .hero-art::before {
@@ -193,13 +196,6 @@ body {
 
 .hero-art:hover {
   filter: brightness(1.08);
-}
-
-.hero-art::after {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(201, 169, 122, 0.22);
 }
 
 .featured-panel {
@@ -597,6 +593,7 @@ body {
 }
 
 .lightbox-media {
+  position: relative;
   margin: 14px;
   width: calc(100% - 28px);
   max-height: 76vh;
@@ -614,6 +611,35 @@ body {
   height: auto;
   max-height: 76vh;
   object-fit: contain;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 1px solid #6a5436;
+  background: rgba(9, 13, 21, 0.88);
+  color: #dbc9ab;
+  font-size: 1.8rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.lightbox-nav:hover {
+  border-color: #b69262;
+  color: #f0dec0;
+}
+
+.lightbox-nav-prev {
+  left: 10px;
+}
+
+.lightbox-nav-next {
+  right: 10px;
 }
 
 body.no-scroll {
@@ -1001,9 +1027,9 @@ body.no-scroll {
 
 .environment-art-thumb {
   background-image:
-    linear-gradient(165deg, rgba(170, 165, 158, 0.82), rgba(86, 88, 94, 0.85)),
-    repeating-linear-gradient(to right, rgba(32, 34, 39, 0.24) 0, rgba(32, 34, 39, 0.24) 1px, transparent 1px, transparent 18px),
-    url('Images/wide_alley(1).png');
+    url('Images/storethumbnail.jpg'),
+    linear-gradient(165deg, rgba(170, 165, 158, 0.22), rgba(86, 88, 94, 0.28)),
+    repeating-linear-gradient(to right, rgba(32, 34, 39, 0.08) 0, rgba(32, 34, 39, 0.08) 1px, transparent 1px, transparent 18px);
   background-size: cover;
   background-position: center;
 }
@@ -1288,16 +1314,24 @@ body.no-scroll {
 
 @media (max-width: 900px) {
   .hero-panel {
+    position: static;
+    display: grid;
     grid-template-columns: 1fr;
+    min-height: 0;
+    overflow: visible;
   }
 
   .hero-copy {
+    width: 100%;
+    min-height: 0;
+    z-index: auto;
     padding: 44px 24px;
   }
 
   .hero-art {
+    position: relative;
+    inset: auto;
     min-height: 300px;
-    border-left: 0;
     border-top: 1px solid var(--line);
   }
 

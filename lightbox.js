@@ -33,26 +33,152 @@
   const previewImage = document.getElementById("lightbox-image");
   const title = document.getElementById("lightbox-title");
   const closeBtn = document.getElementById("lightbox-close");
+  const media = previewImage ? previewImage.parentElement : null;
 
-  if (!lightbox || !previewImage || !title || !closeBtn) {
+  if (!lightbox || !previewImage || !title || !closeBtn || !media) {
     return;
   }
 
+  const prevBtn = document.createElement("button");
+  prevBtn.type = "button";
+  prevBtn.className = "lightbox-nav lightbox-nav-prev";
+  prevBtn.setAttribute("aria-label", "Previous image");
+  prevBtn.textContent = "‹";
+
+  const nextBtn = document.createElement("button");
+  nextBtn.type = "button";
+  nextBtn.className = "lightbox-nav lightbox-nav-next";
+  nextBtn.setAttribute("aria-label", "Next image");
+  nextBtn.textContent = "›";
+
+  media.appendChild(prevBtn);
+  media.appendChild(nextBtn);
+
   const triggers = Array.from(document.querySelectorAll(".js-lightbox-trigger"));
   let lastTrigger = null;
+  let galleryLabel = "Artwork preview";
+  let gallerySources = [];
+  let galleryIndex = 0;
+  let suppressNav = false;
+  let navMode = "none";
+  let currentTrigger = null;
+  let groupedTriggers = [];
 
-  function openLightbox(trigger) {
-    const src = getImageSource(trigger);
+  function parseGallerySources(trigger, primarySource) {
+    const galleryAttr = trigger.getAttribute("data-lightbox-gallery") || "";
+    const extras = galleryAttr
+      .split("|")
+      .map(function (item) {
+        return item.trim();
+      })
+      .filter(Boolean);
 
-    if (!src) {
+    const merged = [primarySource].concat(extras).filter(Boolean);
+    const seen = new Set();
+
+    return merged.filter(function (src) {
+      if (seen.has(src)) {
+        return false;
+      }
+
+      seen.add(src);
+      return true;
+    });
+  }
+
+  function updateNavState() {
+    const hasNavigation = !suppressNav && navMode !== "none";
+    prevBtn.hidden = !hasNavigation;
+    nextBtn.hidden = !hasNavigation;
+  }
+
+  function updateTitle() {
+    if (navMode === "gallery" && gallerySources.length > 1) {
+      title.textContent = galleryLabel + " (" + (galleryIndex + 1) + "/" + gallerySources.length + ")";
       return;
     }
 
-    const label = trigger.getAttribute("data-lightbox-label") || trigger.getAttribute("aria-label") || "Artwork preview";
+    if (navMode === "layout" && groupedTriggers.length > 1 && currentTrigger) {
+      const currentIndex = groupedTriggers.indexOf(currentTrigger);
+      title.textContent = galleryLabel + " (" + (currentIndex + 1) + "/" + groupedTriggers.length + ")";
+      return;
+    }
 
-    previewImage.src = src;
-    previewImage.alt = label;
-    title.textContent = label;
+    title.textContent = galleryLabel;
+  }
+
+  function showGalleryImage(index) {
+    if (!gallerySources.length) {
+      return;
+    }
+
+    const length = gallerySources.length;
+    galleryIndex = (index + length) % length;
+    previewImage.src = gallerySources[galleryIndex];
+    previewImage.alt = galleryLabel;
+    updateTitle();
+  }
+
+  function getGroupedTriggers(trigger) {
+    const group = trigger.getAttribute("data-lightbox-group");
+
+    if (!group) {
+      return [];
+    }
+
+    return triggers.filter(function (item) {
+      return item.getAttribute("data-lightbox-group") === group;
+    });
+  }
+
+  function loadTrigger(trigger) {
+    const src = getImageSource(trigger);
+
+    if (!src) {
+      return false;
+    }
+
+    const label = trigger.getAttribute("data-lightbox-label") || trigger.getAttribute("aria-label") || "Artwork preview";
+    const requestedNav = trigger.getAttribute("data-lightbox-navigation");
+
+    galleryLabel = label;
+    gallerySources = parseGallerySources(trigger, src);
+    galleryIndex = 0;
+    suppressNav = trigger.getAttribute("data-lightbox-arrows") === "false";
+    currentTrigger = trigger;
+    groupedTriggers = requestedNav === "layout" ? getGroupedTriggers(trigger) : [];
+
+    if (!suppressNav && gallerySources.length > 1) {
+      navMode = "gallery";
+    } else if (!suppressNav && groupedTriggers.length > 1) {
+      navMode = "layout";
+    } else {
+      navMode = "none";
+    }
+
+    updateNavState();
+    showGalleryImage(0);
+    return true;
+  }
+
+  function moveByLayout(delta) {
+    if (navMode !== "layout" || !currentTrigger || groupedTriggers.length < 2) {
+      return;
+    }
+
+    const currentIndex = groupedTriggers.indexOf(currentTrigger);
+    if (currentIndex === -1) {
+      return;
+    }
+
+    const nextIndex = (currentIndex + delta + groupedTriggers.length) % groupedTriggers.length;
+    loadTrigger(groupedTriggers[nextIndex]);
+  }
+
+  function openLightbox(trigger) {
+    if (!loadTrigger(trigger)) {
+      return;
+    }
 
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
@@ -64,6 +190,13 @@
     lightbox.setAttribute("aria-hidden", "true");
     document.body.classList.remove("no-scroll");
     previewImage.src = "";
+    gallerySources = [];
+    galleryIndex = 0;
+    suppressNav = false;
+    navMode = "none";
+    currentTrigger = null;
+    groupedTriggers = [];
+    updateNavState();
 
     if (lastTrigger) {
       lastTrigger.focus();
@@ -92,6 +225,28 @@
 
   closeBtn.addEventListener("click", closeLightbox);
 
+  prevBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (navMode === "gallery") {
+      showGalleryImage(galleryIndex - 1);
+      return;
+    }
+
+    moveByLayout(-1);
+  });
+
+  nextBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (navMode === "gallery") {
+      showGalleryImage(galleryIndex + 1);
+      return;
+    }
+
+    moveByLayout(1);
+  });
+
   lightbox.addEventListener("click", function (event) {
     if (event.target === lightbox) {
       closeLightbox();
@@ -99,8 +254,32 @@
   });
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+    if (!lightbox.classList.contains("is-open")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
       closeLightbox();
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+      if (navMode === "gallery") {
+        showGalleryImage(galleryIndex - 1);
+        return;
+      }
+
+      moveByLayout(-1);
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      if (navMode === "gallery") {
+        showGalleryImage(galleryIndex + 1);
+        return;
+      }
+
+      moveByLayout(1);
     }
   });
 })();
