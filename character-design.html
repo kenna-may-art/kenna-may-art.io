@@ -23,19 +23,19 @@
 
         <section class="character-grid" aria-label="Character design gallery">
           <article class="character-card">
-            <div class="character-art character-art-concepts" role="img" aria-label="Character concept thumbnails placeholder"></div>
+            <div class="character-art character-art-concepts js-lightbox-trigger" role="img" aria-label="Character concept thumbnails placeholder" data-lightbox-label="Early character concepts"></div>
             <h2>EARLY CONCEPTS</h2>
             <p>Rapid ideation passes to test shape language and costume direction.</p>
           </article>
 
           <article class="character-card">
-            <div class="character-art character-art-silhouette" role="img" aria-label="Silhouette exploration placeholder"></div>
+            <div class="character-art character-art-silhouette js-lightbox-trigger" role="img" aria-label="Silhouette exploration placeholder" data-lightbox-label="Silhouette studies"></div>
             <h2>SILHOUETTE STUDIES</h2>
             <p>Readable forms designed for immediate recognition in gameplay and dialogue scenes.</p>
           </article>
 
           <article class="character-card">
-            <div class="character-art character-art-expression">
+            <div class="character-art character-art-expression js-lightbox-trigger" data-lightbox-label="Caster expression sheet">
               <img src="Images/caster expressions sheet.png" alt="Caster expression sheet" />
             </div>
             <h2>EXPRESSION SHEETS</h2>
@@ -43,7 +43,7 @@
           </article>
 
           <article class="character-card">
-            <div class="character-art character-art-final">
+            <div class="character-art character-art-final js-lightbox-trigger" data-lightbox-label="Final rendered character scene with Caster">
               <img src="Images/Insidewithcaster1.png" alt="Final rendered character scene with Caster" />
             </div>
             <h2>FINAL RENDERS</h2>
@@ -76,8 +76,18 @@
     </footer>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <div class="lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <div class="lightbox-head">
+        <p class="lightbox-title" id="lightbox-title">Artwork preview</p>
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close preview">CLOSE</button>
+      </div>
+      <div class="lightbox-media">
+        <img id="lightbox-image" src="" alt="Artwork preview" />
+      </div>
+    </div>
+  </div>
+
+  <script src="lightbox.js"></script>
 </body>
 </html>

@@ -23,25 +23,25 @@
 
         <section class="environment-grid" aria-label="Environment process gallery">
           <article class="environment-card">
-            <div class="environment-art environment-art-thumb" role="img" aria-label="Environment thumbnail sketches placeholder"></div>
+            <div class="environment-art environment-art-thumb js-lightbox-trigger" role="img" aria-label="Environment thumbnail sketches placeholder" data-lightbox-label="Environment thumbnail sketches"></div>
             <h2>THUMBNAILS</h2>
             <p>Rapid framing passes to explore camera, layout, and focal points.</p>
           </article>
 
           <article class="environment-card">
-            <div class="environment-art environment-art-value" role="img" aria-label="Environment value study placeholder"></div>
+            <div class="environment-art environment-art-value js-lightbox-trigger" role="img" aria-label="Environment value study placeholder" data-lightbox-label="Environment value studies"></div>
             <h2>VALUE STUDIES</h2>
             <p>Lighting hierarchy and contrast planning for scene depth and clarity.</p>
           </article>
 
           <article class="environment-card">
-            <div class="environment-art environment-art-final" role="img" aria-label="Final environment painting placeholder"></div>
+            <div class="environment-art environment-art-final js-lightbox-trigger" role="img" aria-label="Final environment painting placeholder" data-lightbox-label="Final environment background"></div>
             <h2>FINAL BACKGROUNDS</h2>
             <p>Polished key locations prepared for narrative pacing and atmosphere.</p>
           </article>
 
           <article class="environment-card">
-            <div class="environment-art environment-art-ingame" role="img" aria-label="In-game environment integration placeholder"></div>
+            <div class="environment-art environment-art-ingame js-lightbox-trigger" role="img" aria-label="In-game environment integration placeholder" data-lightbox-label="In-game environment integration"></div>
             <h2>IN-GAME INTEGRATION</h2>
             <p>Final backgrounds tested with sprites, UI overlays, and dialogue flow.</p>
           </article>
@@ -72,8 +72,18 @@
     </footer>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <div class="lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <div class="lightbox-head">
+        <p class="lightbox-title" id="lightbox-title">Artwork preview</p>
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close preview">CLOSE</button>
+      </div>
+      <div class="lightbox-media">
+        <img id="lightbox-image" src="" alt="Artwork preview" />
+      </div>
+    </div>
+  </div>
+
+  <script src="lightbox.js"></script>
 </body>
 </html>

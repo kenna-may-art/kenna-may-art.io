@@ -13,7 +13,7 @@
         <a class="about-back" href="index.html#about" aria-label="Back to portfolio">← BACK TO PORTFOLIO</a>
 
         <div class="about-grid">
-          <div class="about-portrait" role="img" aria-label="Portrait placeholder"></div>
+          <div class="about-portrait js-lightbox-trigger" role="img" aria-label="Portrait placeholder" data-lightbox-label="About portrait"></div>
 
           <div class="about-copy">
             <h1>ABOUT ME</h1>
@@ -55,8 +55,18 @@
     </footer>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <div class="lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <div class="lightbox-head">
+        <p class="lightbox-title" id="lightbox-title">Artwork preview</p>
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close preview">CLOSE</button>
+      </div>
+      <div class="lightbox-media">
+        <img id="lightbox-image" src="" alt="Artwork preview" />
+      </div>
+    </div>
+  </div>
+
+  <script src="lightbox.js"></script>
 </body>
 </html>

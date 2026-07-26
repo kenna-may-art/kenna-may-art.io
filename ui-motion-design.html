@@ -23,7 +23,7 @@
 
         <section class="ui-grid" aria-label="UI and motion process gallery">
           <article class="ui-card">
-            <div class="ui-art ui-art-wireframe">
+            <div class="ui-art ui-art-wireframe js-lightbox-trigger" data-lightbox-label="Wireframe and flow menu mockups">
               <img src="Images/menu mockups 2.png" alt="Wireframe and flow menu mockups" />
             </div>
             <h2>WIREFRAME &amp; FLOW</h2>
@@ -31,7 +31,7 @@
           </article>
 
           <article class="ui-card">
-            <div class="ui-art ui-art-style">
+            <div class="ui-art ui-art-style js-lightbox-trigger" data-lightbox-label="Card layout style frame">
               <img src="Images/card layout.png" alt="Card layout style frame" />
             </div>
             <h2>STYLE FRAMES</h2>
@@ -39,7 +39,7 @@
           </article>
 
           <article class="ui-card">
-            <div class="ui-art ui-art-motion">
+            <div class="ui-art ui-art-motion js-lightbox-trigger" data-lightbox-label="Motion studies graphic">
               <img src="Images/motiongraphic.png" alt="Motion studies graphic" />
             </div>
             <h2>MOTION STUDIES</h2>
@@ -47,7 +47,7 @@
           </article>
 
           <article class="ui-card">
-            <div class="ui-art ui-art-final">
+            <div class="ui-art ui-art-final js-lightbox-trigger" data-lightbox-label="Final UI in-game mockup">
               <img src="Images/menuhighlight.png" alt="Final UI in-game mockup" />
             </div>
             <h2>FINAL IMPLEMENTATION</h2>
@@ -80,8 +80,18 @@
     </footer>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <div class="lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <div class="lightbox-head">
+        <p class="lightbox-title" id="lightbox-title">Artwork preview</p>
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close preview">CLOSE</button>
+      </div>
+      <div class="lightbox-media">
+        <img id="lightbox-image" src="" alt="Artwork preview" />
+      </div>
+    </div>
+  </div>
+
+  <script src="lightbox.js"></script>
 </body>
 </html>
