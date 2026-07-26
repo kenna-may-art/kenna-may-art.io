@@ -412,9 +412,21 @@
 
       function openLightbox(element) {
         const computed = window.getComputedStyle(element);
+        const directImage = element.querySelector("img");
         const label = element.getAttribute("aria-label") || "Artwork preview";
 
-        preview.style.background = computed.background;
+        if (directImage && directImage.getAttribute("src")) {
+          preview.style.backgroundImage = "url(\"" + directImage.getAttribute("src") + "\")";
+          preview.style.backgroundColor = "#0a0f17";
+          preview.style.backgroundRepeat = "no-repeat";
+          preview.style.backgroundPosition = "center";
+          preview.style.backgroundSize = "contain";
+        } else {
+          preview.style.background = computed.background;
+          preview.style.backgroundPosition = "center";
+          preview.style.backgroundSize = "cover";
+        }
+
         title.textContent = label;
         preview.setAttribute("aria-label", label);
 
