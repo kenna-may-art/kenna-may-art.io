@@ -323,6 +323,12 @@ body {
   font-size: 0.9rem;
 }
 
+.project-card:hover .project-copy span,
+.project-card:focus-visible .project-copy span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .projects-cta-wrap {
   margin-top: 22px;
   text-align: center;
