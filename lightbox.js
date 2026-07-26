@@ -8,13 +8,20 @@
 
     const computed = window.getComputedStyle(trigger);
     const backgroundImage = computed.backgroundImage || "";
-    const matches = Array.from(backgroundImage.matchAll(/url\((['\"]?)(.*?)\1\)/g));
 
-    if (!matches.length) {
-      return "";
+    // Prefer quoted url() matches so filenames with parentheses remain intact.
+    const quotedMatches = Array.from(backgroundImage.matchAll(/url\((?:\"([^\"]+)\"|'([^']+)')\)/g));
+    if (quotedMatches.length) {
+      const last = quotedMatches[quotedMatches.length - 1];
+      return last[1] || last[2] || "";
     }
 
-    return matches[matches.length - 1][2];
+    const bareMatches = Array.from(backgroundImage.matchAll(/url\(([^)]+)\)/g));
+    if (bareMatches.length) {
+      return bareMatches[bareMatches.length - 1][1].trim();
+    }
+
+    return "";
   }
 
   const year = document.getElementById("year");
