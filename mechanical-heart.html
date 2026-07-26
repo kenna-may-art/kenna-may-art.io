@@ -325,7 +325,10 @@
         <p class="lightbox-title" id="lightbox-title">Artwork preview</p>
         <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close preview">CLOSE</button>
       </div>
-      <div class="lightbox-preview" id="lightbox-preview" role="img" aria-label="Preview image"></div>
+      <div class="lightbox-preview" id="lightbox-preview" role="img" aria-label="Preview image">
+        <button class="lightbox-nav lightbox-nav-prev" id="lightbox-prev" type="button" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav lightbox-nav-next" id="lightbox-next" type="button" aria-label="Next image">›</button>
+      </div>
     </div>
   </div>
 
@@ -345,6 +348,8 @@
       const preview = document.getElementById("lightbox-preview");
       const title = document.getElementById("lightbox-title");
       const closeBtn = document.getElementById("lightbox-close");
+      const prevBtn = document.getElementById("lightbox-prev");
+      const nextBtn = document.getElementById("lightbox-next");
       const trailerTrigger = document.getElementById("watch-trailer-btn");
       const trailerLightbox = document.getElementById("trailer-lightbox");
       const trailerCloseBtn = document.getElementById("trailer-close");
@@ -355,6 +360,7 @@
       const tabTitle = document.getElementById("character-tab-title");
       const tabCaption = document.getElementById("character-tab-caption");
       let lastTrigger = null;
+      let currentTriggerIndex = -1;
 
       const tabData = {
         caster: {
@@ -410,7 +416,7 @@
         document.body.classList.remove("no-scroll");
       }
 
-      function openLightbox(element) {
+      function setLightboxContent(element) {
         const computed = window.getComputedStyle(element);
         const directImage = element.querySelector("img");
         const label = element.getAttribute("aria-label") || "Artwork preview";
@@ -429,15 +435,32 @@
 
         title.textContent = label;
         preview.setAttribute("aria-label", label);
+      }
+
+      function openLightbox(element) {
+        currentTriggerIndex = triggers.indexOf(element);
+        setLightboxContent(element);
 
         lightbox.classList.add("is-open");
         lightbox.setAttribute("aria-hidden", "false");
         updateScrollLock();
       }
 
+      function showAdjacent(step) {
+        if (!triggers.length) {
+          return;
+        }
+
+        currentTriggerIndex = (currentTriggerIndex + step + triggers.length) % triggers.length;
+        const nextTrigger = triggers[currentTriggerIndex];
+        lastTrigger = nextTrigger;
+        setLightboxContent(nextTrigger);
+      }
+
       function closeLightbox() {
         lightbox.classList.remove("is-open");
         lightbox.setAttribute("aria-hidden", "true");
+        currentTriggerIndex = -1;
         updateScrollLock();
 
         if (lastTrigger) {
@@ -480,6 +503,14 @@
       });
 
       closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        showAdjacent(-1);
+      });
+      nextBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        showAdjacent(1);
+      });
       trailerTrigger.addEventListener("click", openTrailer);
       trailerCloseBtn.addEventListener("click", closeTrailer);
 
@@ -512,6 +543,16 @@
         }
 
         if (lightbox.classList.contains("is-open")) {
+          if (event.key === "ArrowLeft") {
+            showAdjacent(-1);
+            return;
+          }
+
+          if (event.key === "ArrowRight") {
+            showAdjacent(1);
+            return;
+          }
+
           closeLightbox();
         }
       });

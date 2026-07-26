@@ -965,6 +965,7 @@ body {
 }
 
 .lightbox-preview {
+  position: relative;
   margin: 14px;
   width: calc(100% - 28px);
   aspect-ratio: 16 / 10;
@@ -972,6 +973,35 @@ body {
   border: 1px solid #50402c;
   background-position: center;
   background-size: cover;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 1px solid #6a5436;
+  background: rgba(9, 13, 21, 0.88);
+  color: #dbc9ab;
+  font-size: 1.8rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.lightbox-nav:hover {
+  border-color: #b69262;
+  color: #f0dec0;
+}
+
+.lightbox-nav-prev {
+  left: 10px;
+}
+
+.lightbox-nav-next {
+  right: 10px;
 }
 
 .trailer-dialog {
