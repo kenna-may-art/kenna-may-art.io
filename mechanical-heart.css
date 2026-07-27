@@ -835,12 +835,12 @@ body {
 
 .pipeline {
   margin-top: 10px;
-  height: 124px;
-  padding: 10px;
+  height: 180px;
+  padding: 14px;
   border: 1px solid #4b3b2b;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px 22px;
+  gap: 14px 22px;
   align-items: center;
   color: #d7bf97;
   font-size: 0.78rem;
@@ -860,7 +860,7 @@ body {
   color: #dabc91;
 }
 
-.pipeline span:not(:nth-child(3n))::after {
+.pipeline span:not(:nth-child(3n)):not(:last-child)::after {
   content: "→";
   position: absolute;
   right: -16px;
