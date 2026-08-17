@@ -9,7 +9,7 @@
 <body>
   <div class="case-shell">
     <header class="case-nav">
-      <a class="back-link" href="index.html">&larr; BACK TO WORK</a>
+      <a class="back-link" href="index.html">&larr; KENNA MAY / PORTFOLIO</a>
       <nav class="case-tabs" aria-label="Project sections">
         <a href="#overview">OVERVIEW</a>
         <a href="#characters">CHARACTERS</a>
@@ -68,12 +68,18 @@
           </div>
         </article>
 
-        <div class="gallery-grid" id="environments">
-          <div class="gallery-image gallery-image-env"><img src="Images/coffeeshop.png" alt="Coffee shop environment" /></div>
-          <div class="gallery-image gallery-image-ui"><img src="Images/bg_room v2.png" alt="Room background v2" /></div>
-          <div class="gallery-image gallery-image-prop"><img src="Images/finalclockshop.png" alt="Final clock shop environment" /></div>
-          <div class="gallery-image gallery-image-sheet"><img src="Images/walk_bg_pb.png" alt="Walk background" /></div>
-        </div>
+        <article class="gallery-secondary">
+          <div class="gallery-grid" id="environments">
+            <div class="gallery-image gallery-image-env"><img src="Images/coffeeshop.png" alt="Coffee shop environment" /></div>
+            <div class="gallery-image gallery-image-ui"><img src="Images/bg_room v2.png" alt="Room background v2" /></div>
+            <div class="gallery-image gallery-image-prop"><img src="Images/finalclockshop.png" alt="Final clock shop environment" /></div>
+            <div class="gallery-image gallery-image-sheet"><img src="Images/walk_bg_pb.png" alt="Walk background" /></div>
+          </div>
+          <div class="gallery-caption">
+            <h2>Backgrounds</h2>
+            <p>Environments created with a focus on creating comfort and unease.</p>
+          </div>
+        </article>
       </section>
 
       <section class="details" id="implementation" aria-label="Project details">
@@ -124,7 +130,7 @@
             </div>
           </div>
 
-          <p>
+          <p class="direction-note">
             Crimson is reserved for emotional and system-related threats, while
             muted environments allow the character designs and mechanical details
             to remain readable.
@@ -134,16 +140,15 @@
         <article class="showcase-block" id="ui">
           <div class="showcase-headline-row">
             <h2>CHARACTER DEVELOPMENT</h2>
-            <div class="character-tabs" aria-label="Character iteration phases">
-              <button class="character-tab is-active" type="button" data-character="caster" aria-pressed="true">CASTER</button>
-              <button class="character-tab" type="button" data-character="proto" aria-pressed="false">PROTO</button>
-              <button class="character-tab" type="button" data-character="collector" aria-pressed="false">COLLECTOR</button>
-            </div>
           </div>
 
           <figure class="character-tab-panel">
-            <div class="character-tab-art" id="character-tab-art" role="img" aria-label="Caster final sprite concept">
-              <img id="character-tab-image" src="Images/final sprite.png" alt="Caster final sprite concept" />
+            <div class="character-tab-stage">
+              <div class="character-tab-art" id="character-tab-art" role="img" aria-label="Caster final sprite concept">
+                <img id="character-tab-image" src="Images/final sprite.png" alt="Caster final sprite concept" />
+              </div>
+              <button class="character-nav character-nav-prev" id="character-prev" type="button" aria-label="Previous character">‹</button>
+              <button class="character-nav character-nav-next" id="character-next" type="button" aria-label="Next character">›</button>
             </div>
             <figcaption>
               <strong id="character-tab-title">Caster</strong>
@@ -154,35 +159,39 @@
           <div class="process-grid process-grid-four">
             <figure class="process-card">
               <figcaption>Early Concepts</figcaption>
-              <div class="process-thumb thumb-concepts" role="img" aria-label="Early concepts placeholder"></div>
+              <div class="process-thumb" id="character-concepts-thumb">
+                <img id="character-concepts-image" src="Images/caster_character_concept.png" alt="Caster early concepts" />
+              </div>
             </figure>
 
             <figure class="process-card">
               <figcaption>Silhouette / Outfit</figcaption>
-              <div class="process-thumb thumb-silhouette" role="img" aria-label="Silhouette placeholder"></div>
+              <div class="process-thumb" id="character-silhouette-thumb">
+                <img id="character-silhouette-image" src="Images/caster_silouette.png" alt="Caster silhouette study" />
+              </div>
             </figure>
 
             <figure class="process-card">
               <figcaption>Color Studies</figcaption>
-              <div class="process-thumb thumb-color">
-                <img src="Images/colorstudy.png" alt="Color studies" />
+              <div class="process-thumb" id="character-color-thumb">
+                <img id="character-color-image" src="Images/colorstudy.png" alt="Caster color studies" />
               </div>
             </figure>
 
             <figure class="process-card">
               <figcaption>Final Sprite</figcaption>
-              <div class="process-thumb thumb-final">
-                <img src="Images/final sprite.png" alt="Final sprite" />
+              <div class="process-thumb" id="character-final-thumb">
+                <img id="character-final-image" src="Images/final sprite.png" alt="Caster final sprite" />
               </div>
             </figure>
           </div>
 
-          <p>
+          <p id="character-description">
             Caster's silhouette balances theatrical authority with subtle
             constraint. His attire and mannerisms communicate control, 
             while the damaged mechanical parts hint that beneath it all, the performance is unstable. Or falling apart.
           </p>
-          <a class="showcase-more" href="character-design.html">View more</a>
+          <a class="showcase-more" href="index.html#character">View more</a>
         </article>
 
         <article class="showcase-block">
@@ -232,7 +241,7 @@
             character sprites and concentrated important props around exploration
             points.
           </p>
-          <a class="showcase-more" href="environment-design.html">View more</a>
+          <a class="showcase-more" href="index.html#environment">View more</a>
         </article>
       </section>
 
@@ -245,7 +254,7 @@
               A simple yet unique UI keeps dialogue and player controls clear
               over dark backgrounds. Keeping the main focus on the game itself.
             </p>
-            <a class="showcase-more" href="ui-motion-design.html">View more</a>
+            <a class="showcase-more" href="index.html#ui">View more</a>
           </article>
 
           <article class="final-card">
@@ -291,7 +300,6 @@
 
         <nav class="project-pager" aria-label="Project navigation">
           <a href="index.html" aria-label="Back">&larr; BACK</a>
-          <a href="#" aria-label="Next">NEXT &rarr;</a>
         </nav>
       </section>
     </main>
@@ -356,34 +364,79 @@
       const trailerLightbox = document.getElementById("trailer-lightbox");
       const trailerCloseBtn = document.getElementById("trailer-close");
       const trailerIframe = document.getElementById("trailer-iframe");
-      const tabButtons = Array.from(document.querySelectorAll(".character-tab"));
       const tabImage = document.getElementById("character-tab-image");
       const tabArt = document.getElementById("character-tab-art");
       const tabTitle = document.getElementById("character-tab-title");
       const tabCaption = document.getElementById("character-tab-caption");
+      const characterPrevBtn = document.getElementById("character-prev");
+      const characterNextBtn = document.getElementById("character-next");
+      const characterDescription = document.getElementById("character-description");
+      const conceptsThumb = document.getElementById("character-concepts-thumb");
+      const conceptsImage = document.getElementById("character-concepts-image");
+      const silhouetteThumb = document.getElementById("character-silhouette-thumb");
+      const silhouetteImage = document.getElementById("character-silhouette-image");
+      const colorThumb = document.getElementById("character-color-thumb");
+      const colorImage = document.getElementById("character-color-image");
+      const finalThumb = document.getElementById("character-final-thumb");
+      const finalImage = document.getElementById("character-final-image");
       let lastTrigger = null;
       let currentTriggerIndex = -1;
 
       const tabData = {
         caster: {
           title: "Caster",
-          caption: "Final sprite pass used for dialogue scenes and key dramatic beats.",
+          caption: "Final sprite pass used for dialogue scenes.",
           src: "Images/final sprite.png",
-          alt: "Caster final sprite concept"
+          alt: "Caster final sprite concept",
+          concepts: { src: "Images/caster_character_concept.png", alt: "Caster early concepts" },
+          silhouette: { src: "Images/caster_silouette.png", alt: "Caster silhouette study" },
+          color: { src: "Images/colorstudy.png", alt: "Caster color studies" },
+          final: { src: "Images/final sprite.png", alt: "Caster final sprite" },
+          description:
+            "Caster's silhouette balances theatrical authority with subtle constraint. His attire and mannerisms communicate control, while the damaged mechanical parts hint that beneath it all, the performance is unstable. Or falling apart."
         },
         proto: {
           title: "Proto",
           caption: "Finalized Proto concept balancing warmth, curiosity, and mechanical fragility.",
           src: "Images/final proto design.png",
-          alt: "Proto final design concept"
+          alt: "Proto final design concept",
+          concepts: { src: "Images/proto_concept.png", alt: "Proto early concepts" },
+          silhouette: { src: "Images/character concepts 1 proto silo.png", alt: "Proto silhouette study" },
+          color: null,
+          final: { src: "Images/final proto design.png", alt: "Proto final design" },
+          description:
+            "Proto's design leans into a softer, rounder shape language, keeping curiosity and warmth readable even as mechanical fragility shows through in the exposed joints and seams."
         },
         collector: {
           title: "Collector",
           caption: "Final collector design focused on sharp silhouette contrast and antique mechanical detailing.",
           src: "Images/collector designfinal.png",
-          alt: "Collector final character design"
+          alt: "Collector final character design",
+          concepts: { src: "Images/collector concept art.png", alt: "Collector early concepts" },
+          silhouette: null,
+          color: null,
+          final: { src: "Images/collector designfinal.png", alt: "Collector final design" },
+          description:
+            "Collector's silhouette favors sharp, angular contrast and antique mechanical detailing, giving the design a sense of age and quiet menace."
         }
       };
+
+      const characterOrder = ["caster", "proto", "collector"];
+      let currentCharacterIndex = 0;
+
+      function setProcessThumb(thumbEl, imageEl, entry, fallbackAlt) {
+        if (entry) {
+          thumbEl.classList.remove("is-placeholder");
+          imageEl.src = entry.src;
+          imageEl.alt = entry.alt;
+          imageEl.style.display = "";
+        } else {
+          thumbEl.classList.add("is-placeholder");
+          imageEl.removeAttribute("src");
+          imageEl.alt = fallbackAlt;
+          imageEl.style.display = "none";
+        }
+      }
 
       function setCharacterTab(key) {
         const data = tabData[key];
@@ -392,17 +445,22 @@
           return;
         }
 
-        tabButtons.forEach(function (button) {
-          const isActive = button.dataset.character === key;
-          button.classList.toggle("is-active", isActive);
-          button.setAttribute("aria-pressed", isActive ? "true" : "false");
-        });
-
         tabImage.src = data.src;
         tabImage.alt = data.alt;
         tabArt.setAttribute("aria-label", data.alt);
         tabTitle.textContent = data.title;
         tabCaption.textContent = data.caption;
+        characterDescription.textContent = data.description;
+
+        setProcessThumb(conceptsThumb, conceptsImage, data.concepts, data.title + " early concepts placeholder");
+        setProcessThumb(silhouetteThumb, silhouetteImage, data.silhouette, data.title + " silhouette placeholder");
+        setProcessThumb(colorThumb, colorImage, data.color, data.title + " color studies placeholder");
+        setProcessThumb(finalThumb, finalImage, data.final, data.title + " final sprite placeholder");
+      }
+
+      function stepCharacter(step) {
+        currentCharacterIndex = (currentCharacterIndex + step + characterOrder.length) % characterOrder.length;
+        setCharacterTab(characterOrder[currentCharacterIndex]);
       }
 
       function updateScrollLock() {
@@ -535,10 +593,14 @@
         }
       });
 
-      tabButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-          setCharacterTab(button.dataset.character);
-        });
+      characterPrevBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        stepCharacter(-1);
+      });
+
+      characterNextBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        stepCharacter(1);
       });
 
       document.addEventListener("keydown", function (event) {
