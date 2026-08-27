@@ -13,7 +13,6 @@
         <a href="#work">WORK</a>
         <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
-        <a class="site-nav-cta" href="mechanical-heart.html">MECHANICAL HEART ↗</a>
       </nav>
     </header>
 
@@ -36,215 +35,45 @@
         <a class="hero-art js-lightbox-trigger" href="#work" aria-label="View featured work" data-lightbox-label="Homepage hero artwork"></a>
       </section>
 
-      <section class="category-tabs" aria-label="Portfolio categories">
-        <div class="category-item">
-          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="work" id="tab-work" data-target="work">
-            <span>FEATURED PROJECT</span>
-            <span class="category-toggle-icon" aria-hidden="true">⌄</span>
-          </button>
+      <section class="projects-panel" id="work" aria-labelledby="projects-title">
+        <header class="projects-head">
+          <p>SELECTED WORK</p>
+          <h2 id="projects-title">PROJECTS</h2>
+        </header>
 
-      <section id="work" class="featured-panel category-panel" aria-labelledby="tab-work" aria-label="Featured projects" hidden>
-        <a class="project-card" href="mechanical-heart.html" id="mechanical-heart" aria-label="Mechanical Heart case study">
-          <div class="project-art project-art-heart" role="img" aria-label="Mechanical Heart artwork"></div>
-          <div class="project-copy">
-            <h3>MECHANICAL HEART</h3>
-            <p>Visual Novel | Solo Developer | Full Case Study</p>
-            <span>View Case Study</span>
+        <div class="project-grid">
+          <a class="project-card" href="mechanical-heart.html" id="mechanical-heart" aria-label="Mechanical Heart case study">
+            <div class="project-art project-art-heart" role="img" aria-label="Mechanical Heart artwork"></div>
+            <div class="project-copy">
+              <h3>MECHANICAL HEART</h3>
+              <p>Visual Novel | Solo Developer | Full Case Study</p>
+              <span>View Case Study</span>
+            </div>
+          </a>
+
+          <a class="project-card" href="fantasy-environment.html" aria-label="Fantasy Environment Design standalone study">
+            <div class="project-art project-art-fantasy" role="img" aria-label="Fantasy environment artwork"></div>
+            <div class="project-copy">
+              <h3>FANTASY ENVIRONMENT DESIGN</h3>
+              <p>Environment Design | Worldbuilding | Process Gallery</p>
+              <span>View Project</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-strip" id="about" aria-labelledby="about-title">
+        <div class="about-strip-identity">
+          <p class="page-kicker">ABOUT ME</p>
+          <h2 id="about-title">MULTIMEDIA DESIGNER &amp; GAME ARTIST</h2>
+          <div class="about-strip-portrait" role="img" aria-label="Portrait of Kenna May"></div>
+        </div>
+        <div class="about-strip-copy">
+          <p>I am Kenna May, a multimedia designer who builds visual identities for story-driven projects through illustration, UI design, and motion. My process brings character, environment, and interface work together into cohesive experiences that support each story.</p>
+          <div class="about-strip-actions">
+            <a class="about-link" href="about.html">MORE ABOUT ME</a>
+            <a class="about-link" href="mailto:kennamayphone@gmail.com">GET IN TOUCH</a>
           </div>
-        </a>
-      </section>
-        </div>
-
-        <div class="category-item">
-          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="approach" id="tab-approach" data-target="approach">
-            <span>MY APPROACH</span>
-            <span class="category-toggle-icon" aria-hidden="true">⌄</span>
-          </button>
-
-        <section class="ui-notes category-panel" id="approach" aria-labelledby="tab-approach" aria-label="Creative approach notes" hidden>
-          <h2>MY APPROACH</h2>
-          <p>
-            My process starts with broad thumbnails, then narrows through silhouette testing,
-            structure, and style. Motion is layered in where it supports usability, kept subtle
-            and purposeful so emotional tone is enhanced without reducing clarity. Across every
-            category I prioritize readability, visual storytelling, and consistency with each
-            project's tone.
-          </p>
-        </section>
-        </div>
-
-        <div class="category-item">
-          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="character" id="tab-character" data-target="character">
-            <span>CHARACTER &amp; VISUAL DEVELOPMENT</span>
-            <span class="category-toggle-icon" aria-hidden="true">⌄</span>
-          </button>
-
-      <section class="character-page category-panel" id="character" aria-labelledby="tab-character" aria-label="Character and visual development" hidden>
-        <header class="character-hero">
-          <p>
-            A collection of my character-focused work across concept exploration,
-            silhouette readability, expression studies, and final key visuals.
-          </p>
-        </header>
-
-        <section class="character-grid" aria-label="Character design gallery">
-          <article class="character-card">
-            <div class="character-art character-art-concepts js-lightbox-trigger" role="img" aria-label="Character concept thumbnails placeholder" data-lightbox-label="Early character concepts" data-lightbox-gallery="Images/proto_concept.png|Images/collector design 3.png|Images/collector concept art.png"></div>
-            <h2>EARLY CONCEPTS</h2>
-            <p>Quick ideation passes to test shape language and costume direction.</p>
-          </article>
-
-          <article class="character-card">
-            <div class="character-art character-art-silhouette js-lightbox-trigger" role="img" aria-label="Silhouette exploration placeholder" data-lightbox-label="Silhouette studies"></div>
-            <h2>SILHOUETTE STUDIES</h2>
-            <p>Readable forms designed for iconic recognition in gameplay and dialogue scenes.</p>
-          </article>
-
-          <article class="character-card">
-            <div class="character-art character-art-expression js-lightbox-trigger" data-lightbox-label="Caster expression sheet" data-lightbox-gallery="Images/proto expression.jpg|Images/collector expression.png">
-              <img src="Images/caster expressions sheet.png" alt="Caster expression sheet" />
-            </div>
-            <h2>EXPRESSION SHEETS</h2>
-            <p>Emotion and personality passes to support story beats and branching moments.</p>
-          </article>
-
-          <article class="character-card">
-            <div class="character-art character-art-final js-lightbox-trigger" data-lightbox-label="Final rendered character scene with Caster" data-lightbox-gallery="Images/final sprite.png|Images/final proto design.png|Images/dreamproto1.png|Images/collector designfinalfinal.png">
-              <img src="Images/Insidewithcaster1.png" alt="Final rendered character scene with Caster" />
-            </div>
-            <h2>FINAL RENDERS</h2>
-            <p>Polished pieces refined for game implementation and promotional use.</p>
-          </article>
-        </section>
-      </section>
-        </div>
-
-        <div class="category-item">
-          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="environment" id="tab-environment" data-target="environment">
-            <span>ENVIRONMENT &amp; SCENE DESIGN</span>
-            <span class="category-toggle-icon" aria-hidden="true">⌄</span>
-          </button>
-
-      <section class="environment-page category-panel" id="environment" aria-labelledby="tab-environment" aria-label="Environment and world development" hidden>
-        <header class="environment-hero">
-          <p>
-            Background and worldbuilding studies from rough composition to final
-            in-engine scenes, focused on mood, readability, and interactive storytelling.
-          </p>
-        </header>
-
-        <section class="environment-grid" aria-label="Environment process gallery">
-          <article class="environment-card">
-            <div class="environment-art environment-art-thumb js-lightbox-trigger" role="img" aria-label="Environment thumbnail sketches placeholder" data-lightbox-label="Environment thumbnail sketches" data-lightbox-navigation="layout" data-lightbox-group="environment-layout" data-lightbox-gallery="Images/storethumbnail.jpg|Images/alleythumbnails.jpg|Images/alleyblockinthumbnails.png"></div>
-            <h2>THUMBNAILS</h2>
-            <p>Rapid framing passes to explore camera, layout, and focal points.</p>
-          </article>
-
-          <article class="environment-card">
-            <div class="environment-art environment-art-value js-lightbox-trigger" role="img" aria-label="Environment value study placeholder" data-lightbox-label="Environment value studies" data-lightbox-navigation="layout" data-lightbox-group="environment-layout"></div>
-            <h2>VALUE STUDIES</h2>
-            <p>Lighting hierarchy and contrast planning for scene depth and clarity.</p>
-          </article>
-
-          <article class="environment-card">
-            <div class="environment-art environment-art-final js-lightbox-trigger" role="img" aria-label="Final environment painting placeholder" data-lightbox-label="Final environment background" data-lightbox-navigation="layout" data-lightbox-group="environment-layout"></div>
-            <h2>FINAL BACKGROUNDS</h2>
-            <p>Polished key locations prepared for narrative pacing and atmosphere.</p>
-          </article>
-
-          <article class="environment-card">
-            <div class="environment-art environment-art-ingame js-lightbox-trigger" role="img" aria-label="In-game environment integration placeholder" data-lightbox-label="In-game environment integration" data-lightbox-navigation="layout" data-lightbox-group="environment-layout"></div>
-            <h2>IN-GAME INTEGRATION</h2>
-            <p>Final backgrounds tested with sprites, UI overlays, and dialogue flow.</p>
-          </article>
-        </section>
-      </section>
-        </div>
-
-        <div class="category-item">
-          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="ui" id="tab-ui" data-target="ui">
-            <span>UI &amp; MOTION DESIGN</span>
-            <span class="category-toggle-icon" aria-hidden="true">⌄</span>
-          </button>
-
-      <section class="ui-page category-panel" id="ui" aria-labelledby="tab-ui" aria-label="UI and motion design" hidden>
-        <header class="ui-hero">
-          <p>
-            Interface and motion studies focused on readability, atmosphere,
-            and storytelling clarity across dialogue, menus, and transitions.
-          </p>
-        </header>
-
-        <section class="ui-grid" aria-label="UI and motion process gallery">
-          <article class="ui-card">
-            <div class="ui-art ui-art-wireframe js-lightbox-trigger" data-lightbox-label="Wireframe and flow menu mockups" data-lightbox-navigation="layout" data-lightbox-group="ui-motion-layout">
-              <img src="Images/menu mockups 2.png" alt="Wireframe and flow menu mockups" />
-            </div>
-            <h2>WIREFRAME &amp; FLOW</h2>
-            <p>Layout planning for dialogue hierarchy, controls, and interaction paths.</p>
-          </article>
-
-          <article class="ui-card">
-            <div class="ui-art ui-art-style js-lightbox-trigger" data-lightbox-label="Card layout style frame" data-lightbox-navigation="layout" data-lightbox-group="ui-motion-layout">
-              <img src="Images/card layout.png" alt="Card layout style frame" />
-            </div>
-            <h2>STYLE FRAMES</h2>
-            <p>Visual language passes for panel framing, icon shape, and typography rhythm.</p>
-          </article>
-
-          <article class="ui-card">
-            <div class="ui-art ui-art-motion js-lightbox-trigger" data-lightbox-label="Motion studies graphic" data-lightbox-navigation="layout" data-lightbox-group="ui-motion-layout">
-              <img src="Images/motiongraphic.png" alt="Motion studies graphic" />
-            </div>
-            <h2>MOTION STUDIES</h2>
-            <p>Timing passes for dialogue transitions, hover states, and focus indicators.</p>
-          </article>
-
-          <article class="ui-card">
-            <div class="ui-art ui-art-final js-lightbox-trigger" data-lightbox-label="Final UI in-game mockup" data-lightbox-navigation="layout" data-lightbox-group="ui-motion-layout">
-              <img src="Images/menuhighlight.png" alt="Final UI in-game mockup" />
-            </div>
-            <h2>FINAL IMPLEMENTATION</h2>
-            <p>Integrated screens tested over gameplay art for legibility and pacing.</p>
-          </article>
-        </section>
-      </section>
-        </div>
-
-        <div class="category-item">
-          <button class="category-toggle" type="button" aria-expanded="false" aria-controls="about" id="tab-about" data-target="about">
-            <span>ABOUT ME</span>
-            <span class="category-toggle-icon" aria-hidden="true">⌄</span>
-          </button>
-
-      <section class="about-page category-panel" id="about" aria-labelledby="tab-about" aria-label="About Kenna May" hidden>
-        <div class="about-grid">
-          <div class="about-portrait js-lightbox-trigger" role="img" aria-label="Portrait placeholder" data-lightbox-label="About portrait"></div>
-
-          <div class="about-copy">
-            <h1>ABOUT ME</h1>
-            <h2>MULTIMEDIA DESIGNER &amp; GAME ARTIST</h2>
-
-            <p>
-              I am Kenna May, a multimedia designer who enjoys building visual identities for
-              story-driven projects. My work blends illustration, UI design, and motion to
-              create cohesive game experiences from concept through final polish.
-            </p>
-
-            <p>
-              I especially enjoy designing characters and interfaces that support worldbuilding,
-              emotion, and gameplay clarity. Whether I am creating key art, in-game assets, or
-              promotional visuals, I focus on readability, atmosphere, and personality.
-            </p>
-
-            <ul class="about-list" aria-label="Primary creative focus">
-              <li>Character concepting and visual development</li>
-              <li>UI design for menus, HUD systems, and narrative screens</li>
-              <li>Motion graphics and polished presentation assets</li>
-            </ul>
-          </div>
-        </div>
-      </section>
         </div>
       </section>
     </main>
@@ -252,14 +81,8 @@
     <footer class="site-footer">
       <div class="footer-glow" aria-hidden="true"></div>
 
-      <div class="container footer-top">
-        <section class="footer-connect-card" id="contact" aria-label="Contact and social links">
-          <div class="footer-contact-copy">
-            <h3>LET'S CONNECT</h3>
-            <p>Interested in working together?</p>
-            <a class="footer-cta" href="mailto:kennamayphone@gmail.com">GET IN TOUCH</a>
-          </div>
-
+      <div class="container footer-top" id="contact">
+        <section class="footer-connect-card" aria-label="Social links">
           <div class="footer-icons" aria-label="Social links">
             <a class="footer-icon" href="https://www.deviantart.com/pyreee" target="_blank" rel="noopener" aria-label="DeviantArt">DA</a>
             <a class="footer-icon" href="https://x.com/KennaMay213501" target="_blank" rel="noopener" aria-label="X">X</a>
@@ -290,41 +113,38 @@
   <script src="lightbox.js"></script>
   <script>
     (function () {
-      const tabs = Array.from(document.querySelectorAll(".category-toggle"));
-      const panels = Array.from(document.querySelectorAll(".category-panel"));
+      const navigationLinks = Array.from(document.querySelectorAll('.site-nav-links a[href^="#"]'));
+      const sections = navigationLinks
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
 
-      function activateCategory(key) {
-        const targetPanel = panels.find(function (panel) {
-          return panel.id === key;
+      const setActiveLink = (sectionId) => {
+        navigationLinks.forEach((link) => {
+          link.classList.toggle('is-active', link.getAttribute('href') === `#${sectionId}`);
         });
+      };
 
-        if (!targetPanel) {
-          return;
-        }
-
-        const isAlreadyOpen = !targetPanel.hidden;
-
-        tabs.forEach(function (tab) {
-          const isActive = !isAlreadyOpen && tab.dataset.target === key;
-          tab.classList.toggle("is-active", isActive);
-          tab.setAttribute("aria-expanded", isActive ? "true" : "false");
-        });
-
-        panels.forEach(function (panel) {
-          panel.hidden = isAlreadyOpen || panel.id !== key;
-        });
-      }
-
-      tabs.forEach(function (tab) {
-        tab.addEventListener("click", function () {
-          activateCategory(tab.dataset.target);
-        });
+      navigationLinks.forEach((link) => {
+        link.addEventListener('click', () => setActiveLink(link.getAttribute('href').slice(1)));
       });
 
-      const hashKey = window.location.hash.slice(1);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visibleSection = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
 
-      if (["work", "approach", "character", "environment", "ui", "about"].indexOf(hashKey) !== -1) {
-        activateCategory(hashKey);
+          if (visibleSection) {
+            setActiveLink(visibleSection.target.id);
+          }
+        },
+        { rootMargin: '-12% 0px -65% 0px', threshold: [0.1, 0.35, 0.6] }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+
+      if (location.hash) {
+        setActiveLink(location.hash.slice(1));
       }
     })();
   </script>
