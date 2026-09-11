@@ -1,3 +1,4 @@
+
 (function () {
   function getImageSource(trigger) {
     const directImage = trigger.querySelector("img");
