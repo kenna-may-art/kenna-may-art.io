@@ -363,6 +363,11 @@ body {
   gap: 0;
 }
 
+.results-section {
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--line);
+}
+
 .detail-block {
   padding: 40px 32px 44px;
   border-right: 1px solid var(--line);
@@ -932,8 +937,9 @@ body {
 
 .project-pager {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 12px;
   padding: 12px 14px;
   font-size: 1.08rem;
   border-top: 1px solid rgba(43, 54, 74, 0.7);

@@ -634,6 +634,29 @@ body.no-scroll {
   letter-spacing: 0.03em;
 }
 
+.page-kicker-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-back-link {
+  display: inline-flex;
+  color: var(--brass-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.page-back-link:hover,
+.page-back-link:focus-visible {
+  color: var(--brass);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .page-intro p:last-child {
   margin-top: 14px;
   color: var(--muted);
