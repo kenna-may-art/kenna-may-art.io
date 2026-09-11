@@ -281,7 +281,7 @@ body {
   aspect-ratio: 4 / 5;
   margin-top: 18px;
   border: 1px solid var(--plum-soft);
-  background: url('me.jpg') center / cover no-repeat;
+  background: url('Images/Screenshot 2025-10-15 121631.png') center / cover no-repeat;
 }
 
 .about-strip-copy p {
@@ -366,14 +366,6 @@ body {
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
   background-color: var(--bg-2);
-}
-
-.project-art-fantasy {
-  background:
-    linear-gradient(160deg, rgba(13, 13, 15, 0.08), rgba(13, 13, 15, 0.56)),
-    url('Images/fantasyenviromentthumbnail.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .project-copy {
@@ -658,7 +650,7 @@ body.no-scroll {
 .about-portrait {
   aspect-ratio: 4 / 5;
   border: 1px solid var(--line);
-  background: var(--bg-2);
+  background: var(--bg-2) url('Images/Screenshot 2025-10-15 121631.png') center / cover no-repeat;
   position: relative;
 }
 
@@ -712,6 +704,51 @@ body.no-scroll {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.resume-section {
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+}
+
+.resume-section h2,
+.resume-contact h2 {
+  font-family: "Cinzel", serif;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.resume-section p {
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.resume-section strong {
+  color: var(--text);
+}
+
+.resume-section .about-link {
+  margin-top: 18px;
+}
+
+.resume-contact {
+  margin-top: 32px;
+  padding: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-contact .about-link {
+  margin-top: 12px;
 }
 
 .about-link {
@@ -1132,6 +1169,10 @@ body.no-scroll {
   }
 
   .character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-grid {
     grid-template-columns: 1fr;
   }
 
