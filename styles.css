@@ -281,7 +281,7 @@ body {
   aspect-ratio: 4 / 5;
   margin-top: 18px;
   border: 1px solid var(--plum-soft);
-  background: url('Images/Screenshot 2025-10-15 121631.png') center / cover no-repeat;
+  background: url('Images/about-portrait.jpg') center / cover no-repeat;
 }
 
 .about-strip-copy p {
@@ -650,7 +650,7 @@ body.no-scroll {
 .about-portrait {
   aspect-ratio: 4 / 5;
   border: 1px solid var(--line);
-  background: var(--bg-2) url('Images/Screenshot 2025-10-15 121631.png') center / cover no-repeat;
+  background: var(--bg-2) url('Images/about-portrait.jpg') center / cover no-repeat;
   position: relative;
 }
 
