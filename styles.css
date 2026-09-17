@@ -55,6 +55,20 @@ body {
   padding: 20px 4px;
 }
 
+.back-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  transition: color 200ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--brass-soft);
+}
+
 .site-nav-links {
   display: flex;
   align-items: center;
@@ -903,6 +917,11 @@ body.no-scroll {
   border-top: 1px solid var(--line);
 }
 
+.character-profile:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
 .character-profile-head h2 {
   margin-top: 6px;
   font-family: "Cinzel", serif;
@@ -932,26 +951,49 @@ body.no-scroll {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: var(--bg-2);
+  background-color: var(--bg-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.character-art img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.character-art-caster-final {
+  background-image: url('Images/Insidewithcaster1.png');
 }
 
-.character-art-final {
-  aspect-ratio: 4 / 3;
+.character-art-caster-concept {
+  background-image: url('Images/caster_character_concept.png');
 }
 
-.character-art-final img {
-  object-fit: contain;
-  background: var(--bg-2);
+.character-art-caster-expression {
+  background-image: url('Images/caster%20expressions%20sheet.png');
 }
 
-.character-art figcaption {
+.character-art-proto-final {
+  background-image: url('Images/final%20proto%20design.png');
+}
+
+.character-art-proto-concept {
+  background-image: url('Images/proto_concept.png');
+}
+
+.character-art-proto-expression {
+  background-image: url('Images/proto%20expression.jpg');
+}
+
+.character-art-collector-final {
+  background-image: url('Images/collector%20designfinal.png');
+}
+
+.character-art-collector-concept {
+  background-image: url('Images/collector%20concept%20art.png');
+}
+
+.character-art-collector-expression {
+  background-image: url('Images/collector%20expression.png');
+}
+
+.character-art-tag {
   position: absolute;
   left: 12px;
   bottom: 10px;
@@ -980,14 +1022,6 @@ body.no-scroll {
   background-image: url('Images/character%20concepts%201%20proto%20silo.png');
   background-size: cover;
   background-position: center;
-}
-
-.character-art-expression {
-  background: var(--bg-2);
-}
-
-.character-art-final {
-  background: var(--bg-2);
 }
 
 .character-card h2 {

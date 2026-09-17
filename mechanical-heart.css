@@ -31,7 +31,6 @@ body {
 .case-shell {
   width: min(1120px, 96vw);
   margin: 10px auto;
-  border: 3px solid var(--gold);
   background:
     repeating-linear-gradient(
       to right,
