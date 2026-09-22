@@ -220,7 +220,7 @@ body {
 .hero-art {
   display: block;
   position: relative;
-  background-image: url('neo.jpg');
+  background-image: url('Images/neo.jpg');
   background-size: cover;
   background-position: center right;
 }
@@ -909,32 +909,7 @@ body.no-scroll {
 
 .character-profiles {
   display: grid;
-  gap: 64px;
-}
-
-.character-profile {
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
-}
-
-.character-profile:first-child {
-  padding-top: 0;
-  border-top: none;
-}
-
-.character-profile-head h2 {
-  margin-top: 6px;
-  font-family: "Cinzel", serif;
-  color: var(--text);
-  font-size: clamp(1.45rem, 3vw, 2rem);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.character-profile-grid {
-  margin-top: 22px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) repeat(2, minmax(0, 0.875fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -991,25 +966,6 @@ body.no-scroll {
 
 .character-art-collector-expression {
   background-image: url('Images/collector%20expression.png');
-}
-
-.character-art-tag {
-  position: absolute;
-  left: 12px;
-  bottom: 10px;
-  color: var(--text);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
-}
-
-.character-problem {
-  margin-top: 20px;
-  max-width: 72ch;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.7;
 }
 
 .character-art-concepts {
@@ -1294,8 +1250,8 @@ body.no-scroll {
     grid-template-columns: 1fr;
   }
 
-  .character-profile-grid {
-    grid-template-columns: 1fr;
+  .character-profiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .resume-grid {
