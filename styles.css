@@ -924,6 +924,42 @@ body.no-scroll {
   background-image: url('Images/collector%20expression.png');
 }
 
+.visual-art-ash-cog {
+  background-image: url('Images/ashandcogrefine3.png');
+}
+
+.visual-art-bg-shop {
+  background-image: url('Images/bg%20shop%203.png');
+}
+
+.visual-art-walk {
+  background-image: url('Images/the_walk_1_bg.png');
+}
+
+.visual-art-room-v1 {
+  background-image: url('Images/bg_room%20v1.png');
+}
+
+.visual-art-room-v2 {
+  background-image: url('Images/bg_room%20v2.png');
+}
+
+.visual-art-dream {
+  background-image: url('Images/dream_sequence_by_pyreee_dlrowi4-pre.jpg');
+}
+
+.visual-art-menu-highlight {
+  background-image: url('Images/menuhighlight.png');
+}
+
+.visual-art-card-layout {
+  background-image: url('Images/card%20layout.png');
+}
+
+.visual-art-card-covers {
+  background-image: url('Images/card%20layout%20covers.png');
+}
+
 .character-art-concepts {
   background-image: url('Images/character%20concepts%201%20caster.png');
   background-size: cover;
