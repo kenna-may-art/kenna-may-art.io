@@ -212,13 +212,10 @@ body {
 }
 
 .hero-art::after {
-  content: "KEY ART";
+  content: "";
   position: absolute;
   right: 20px;
   bottom: 18px;
-  color: rgba(223, 197, 156, 0.78);
-  letter-spacing: 0.16em;
-  font-size: 0.74rem;
 }
 
 .image-pop-trigger {
@@ -425,6 +422,24 @@ body {
   border-radius: 999px;
   border: 1px solid #c8ab79;
   box-shadow: inset 0 0 0 2px rgba(8, 12, 20, 0.9);
+}
+
+.results-section .detail-block {
+  padding: 24px 32px 28px;
+}
+
+.results-section .detail-block h2 {
+  font-size: 2rem;
+}
+
+.results-section .detail-block ul {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.results-section .detail-block li {
+  margin-top: 8px;
 }
 
 .process-showcase {
