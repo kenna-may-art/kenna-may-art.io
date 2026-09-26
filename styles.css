@@ -960,6 +960,42 @@ body.no-scroll {
   background-image: url('Images/card%20layout%20covers.png');
 }
 
+.visual-art-collector-final {
+  background-image: url('Images/collector%20designfinal.png');
+}
+
+.visual-art-final-sprite {
+  background-image: url('Images/final%20sprite.png');
+}
+
+.visual-art-c3 {
+  background-image: url('Images/c3.png');
+}
+
+.visual-art-mhcaster {
+  background-image: url('Images/MHCASTER.png');
+}
+
+.visual-art-flyer {
+  background-image: url('Images/flyer.png');
+}
+
+.visual-art-heart-redline {
+  background-image: url('Images/heart_from_redline_tight.png');
+}
+
+.visual-art-dreamp1 {
+  background-image: url('Images/dreamp1.png');
+}
+
+.visual-art-mechanical-thumbnail {
+  background-image: url('Images/mechanicalhearthumbnailpage.png');
+}
+
+.visual-art-proto-head-tilt {
+  background-image: url('Images/proto%20head%20tilt.png');
+}
+
 .character-art-concepts {
   background-image: url('Images/character%20concepts%201%20caster.png');
   background-size: cover;
