@@ -54,31 +54,6 @@
         <div class="hero-art" role="img" aria-label="Mechanical Heart character key art placeholder" data-lightbox-src="Images/mech heart 2.png"></div>
       </section>
 
-      <section class="gallery" aria-label="In-game screenshots" id="characters">
-        <article class="gallery-feature">
-          <div class="gallery-image gallery-image-feature">
-            <img src="Images/MHCASTER.png" alt="Dialogue scene placeholder" />
-          </div>
-          <div class="gallery-caption">
-            <h2>IN-GAME SCREENSHOTS</h2>
-            <p>Character and environment scenes presented in their final in-game context.</p>
-          </div>
-        </article>
-
-        <article class="gallery-secondary">
-          <div class="gallery-grid" id="environments">
-            <div class="gallery-image gallery-image-ui"><img src="Images/ashandcogrefine3.png" alt="Room background v2" /></div>
-            <div class="gallery-image gallery-image-prop"><img src="Images/clockshop_by_pyreee_dmr9pmf-pre.jpg" alt="Final clock shop environment" /></div>
-            <div class="gallery-image gallery-image-ui"><img src="Images/coffeeshop.png" alt="Coffee shop environment" /></div>
-            <div class="gallery-image gallery-image-prop"><img src="Images/the_walk_1_bg.png" alt="Walk environment" /></div>
-          </div>
-          <div class="gallery-caption">
-            <h2>SCENE DETAILS</h2>
-            <p>Polished scenes showing the game's characters, environments, and atmosphere in context.</p>
-          </div>
-        </article>
-      </section>
-
       <section class="details" id="implementation" aria-label="Project overview and responsibilities">
         <article class="detail-block" id="process">
           <h2>PROJECT OVERVIEW &amp; RESPONSIBILITIES</h2>
@@ -107,8 +82,6 @@
               <div class="character-tab-art" id="character-tab-art" role="img" aria-label="Caster final sprite concept">
                 <img id="character-tab-image" src="Images/final sprite.png" alt="Caster final sprite concept" />
               </div>
-              <button class="character-nav character-nav-prev" id="character-prev" type="button" aria-label="Previous character">‹</button>
-              <button class="character-nav character-nav-next" id="character-next" type="button" aria-label="Next character">›</button>
             </div>
             <figcaption>
               <strong id="character-tab-title">Caster</strong>
@@ -341,8 +314,6 @@
       const tabArt = document.getElementById("character-tab-art");
       const tabTitle = document.getElementById("character-tab-title");
       const tabCaption = document.getElementById("character-tab-caption");
-      const characterPrevBtn = document.getElementById("character-prev");
-      const characterNextBtn = document.getElementById("character-next");
       const characterDescription = document.getElementById("character-description");
       const conceptsThumb = document.getElementById("character-concepts-thumb");
       const conceptsImage = document.getElementById("character-concepts-image");
@@ -368,34 +339,7 @@
           description:
             "Caster's silhouette balances theatrical authority with subtle constraint. His attire and mannerisms communicate control, while the damaged mechanical parts hint that beneath it all, the performance is unstable. Or falling apart."
         },
-        proto: {
-          title: "Proto",
-          caption: "Finalized Proto concept balancing warmth, curiosity, and mechanical fragility.",
-          src: "Images/final proto design.png",
-          alt: "Proto final design concept",
-          concepts: { src: "Images/proto_concept.png", alt: "Proto early concepts" },
-          silhouette: { src: "Images/character concepts 1 proto silo.png", alt: "Proto silhouette study" },
-          color: null,
-          final: { src: "Images/final proto design.png", alt: "Proto final design" },
-          description:
-            "Proto's design leans into a softer, rounder shape language, keeping curiosity and warmth readable even as mechanical fragility shows through in the exposed joints and seams."
-        },
-        collector: {
-          title: "Collector",
-          caption: "Final collector design focused on sharp silhouette contrast and antique mechanical detailing.",
-          src: "Images/collector designfinal.png",
-          alt: "Collector final character design",
-          concepts: { src: "Images/collector concept art.png", alt: "Collector early concepts" },
-          silhouette: null,
-          color: null,
-          final: { src: "Images/collector designfinal.png", alt: "Collector final design" },
-          description:
-            "Collector's silhouette favors sharp, angular contrast and antique mechanical detailing, giving the design a sense of age and quiet menace."
-        }
       };
-
-      const characterOrder = ["caster", "proto", "collector"];
-      let currentCharacterIndex = 0;
 
       function setProcessThumb(thumbEl, imageEl, entry, fallbackAlt) {
         if (entry) {
@@ -429,11 +373,6 @@
         setProcessThumb(silhouetteThumb, silhouetteImage, data.silhouette, data.title + " silhouette placeholder");
         setProcessThumb(colorThumb, colorImage, data.color, data.title + " color studies placeholder");
         setProcessThumb(finalThumb, finalImage, data.final, data.title + " final sprite placeholder");
-      }
-
-      function stepCharacter(step) {
-        currentCharacterIndex = (currentCharacterIndex + step + characterOrder.length) % characterOrder.length;
-        setCharacterTab(characterOrder[currentCharacterIndex]);
       }
 
       function updateScrollLock() {
@@ -564,16 +503,6 @@
         if (event.target === trailerLightbox) {
           closeTrailer();
         }
-      });
-
-      characterPrevBtn.addEventListener("click", function (event) {
-        event.stopPropagation();
-        stepCharacter(-1);
-      });
-
-      characterNextBtn.addEventListener("click", function (event) {
-        event.stopPropagation();
-        stepCharacter(1);
       });
 
       document.addEventListener("keydown", function (event) {
