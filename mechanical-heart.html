@@ -1,535 +1,136 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mechanical Heart - Kenna May</title>
-  <link rel="stylesheet" href="mechanical-heart.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10141c">
+  <meta name="description" content="Kenna May's game art portfolio, featuring the Mechanical Heart visual novel, character design, environments, interface art, and development process.">
+  <title>Mechanical Heart · Kenna May</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <div class="case-shell">
-    <header class="case-nav">
-      <a class="back-link" href="index.html">&larr; KENNA MAY / PORTFOLIO</a>
-      <nav class="case-tabs" aria-label="Project sections">
-        <a href="index.html#work">WORK</a>
-        <a href="index.html#about">ABOUT</a>
-        <a href="index.html#contact">CONTACT</a>
+  <a class="skip-link" href="#main">Skip to work</a>
+  <div class="site-frame">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Kenna May, back to top">KENNA MAY<span class="wordmark-mark" aria-hidden="true">✦</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="visual-development.html">Gallery</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero" id="overview" aria-label="Mechanical Heart overview">
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1>MECHANICAL HEART</h1>
-          <p class="hero-summary">
-            A visual novel about memory, emotional machinery,
-            and the constructs left behind from a failed experiment.
-          </p>
-
-          <dl class="hero-meta">
-            <div>
-              <dt>Role</dt>
-              <dd>Solo Developer / Game Artist</dd>
-            </div>
-            <div>
-              <dt>Tools</dt>
-              <dd>Ren'Py, Clip Studio Paint, Photoshop, Illustrator, After Effects, Premiere, Audacity</dd>
-            </div>
-            <div>
-              <dt>Tasks</dt>
-              <dd>Art Direction, Character Design, Photobashing, Environment Art, UI Design, Narrative Design, Asset Implementation, Promotional Design</dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>Playable Demo</dd>
-            </div>
-          </dl>
-
+          <p class="eyebrow">Selected project · Visual novel</p>
+          <h1 id="hero-title">Mechanical<br><em>Heart</em></h1>
+          <p class="hero-deck">A story about memory, emotional machinery, and the constructs left behind by a failed experiment.</p>
+          <p class="hero-intro">I created the playable demo as a solo developer, taking the art from early concepts through scenes built in Ren’Py.</p>
           <div class="hero-actions">
-            <a class="btn btn-solid" href="https://pyre3.itch.io/mechanical-heart" target="_blank" rel="noopener">PLAY THE DEMO</a>
-            <button class="btn btn-outline" id="watch-trailer-btn" type="button">WATCH TRAILER</button>
+            <a class="button button-primary" href="https://pyre3.itch.io/mechanical-heart" target="_blank" rel="noopener noreferrer">Play the demo <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#work">Explore the work</a>
           </div>
         </div>
-
-        <div class="hero-art" role="img" aria-label="Mechanical Heart character key art placeholder" data-lightbox-src="Images/mech heart 2.png"></div>
+        <div class="hero-stage" aria-label="Caster character art in front of the circus environment">
+          <img class="hero-environment" src="assets/circus-environment.webp" alt="" fetchpriority="high">
+          <div class="hero-vignette" aria-hidden="true"></div>
+          <img class="hero-character" src="assets/caster-sprite.webp" alt="Caster, the masked ringmaster in a crimson coat" fetchpriority="high">
+          <span class="hero-stage-label">Character art · Caster</span>
+        </div>
       </section>
 
-      <section class="details" id="implementation" aria-label="Project overview and responsibilities">
-        <article class="detail-block" id="process">
-          <h2>PROJECT OVERVIEW &amp; RESPONSIBILITIES</h2>
-          <p>
-            My goal was to build a visually cohesive game demo with a
-            mysterious industrial theme with bio-mechanical components. Because I was working independently, I
-            developed a reusable production pipeline for character sprites,
-            environments, interface assets, and narrative implementation.
-          </p>
-        </article>
-
-        <article class="detail-block">
-          <h2>RESPONSIBILITIES</h2>
-          <p>As a solo developer, I directed the visual language and handled character design, environment art, UI design, narrative design, implementation, and promotional assets.</p>
-        </article>
+      <section class="project-facts" aria-label="Project details">
+        <div><span class="fact-label">My role</span><strong>Solo developer &amp; game artist</strong></div>
+        <div><span class="fact-label">Disciplines</span><strong>Characters · Environments · UI · Narrative</strong></div>
+        <div><span class="fact-label">Built with</span><strong>Ren’Py · Clip Studio Paint · Photoshop</strong></div>
+        <div><span class="fact-label">Status</span><strong>Playable demo · In development</strong></div>
       </section>
 
-      <section class="process-showcase" aria-label="Visual development process boards">
-        <article class="showcase-block" id="character-development">
-          <div class="showcase-headline-row">
-            <h2>CHARACTER DESIGN: CASTER</h2>
-          </div>
-
-          <figure class="character-tab-panel">
-            <div class="character-tab-stage">
-              <div class="character-tab-art" id="character-tab-art" role="img" aria-label="Caster final sprite concept">
-                <img id="character-tab-image" src="Images/final sprite.png" alt="Caster final sprite concept" />
-              </div>
-            </div>
-            <figcaption>
-              <strong id="character-tab-title">Caster</strong>
-              <span id="character-tab-caption">Final sprite pass used for dialogue scenes and key dramatic beats.</span>
-            </figcaption>
-          </figure>
-
-          <div class="process-grid process-grid-four">
-            <figure class="process-card">
-              <figcaption>Early Concepts</figcaption>
-              <div class="process-thumb" id="character-concepts-thumb">
-                <img id="character-concepts-image" src="Images/caster_character_concept.png" alt="Caster early concepts" />
-              </div>
-            </figure>
-
-            <figure class="process-card">
-              <figcaption>Silhouette / Outfit</figcaption>
-              <div class="process-thumb" id="character-silhouette-thumb">
-                <img id="character-silhouette-image" src="Images/caster_silouette.png" alt="Caster silhouette study" />
-              </div>
-            </figure>
-
-            <figure class="process-card">
-              <figcaption>Color Studies</figcaption>
-              <div class="process-thumb" id="character-color-thumb">
-                <img id="character-color-image" src="Images/colorstudy.png" alt="Caster color studies" />
-              </div>
-            </figure>
-
-            <figure class="process-card">
-              <figcaption>Final Sprite</figcaption>
-              <div class="process-thumb" id="character-final-thumb">
-                <img id="character-final-image" src="Images/final sprite.png" alt="Caster final sprite" />
-              </div>
-            </figure>
-          </div>
-
-          <p id="character-description">
-            Caster's silhouette balances theatrical authority with subtle
-            constraint. His attire and mannerisms communicate control, 
-            while the damaged mechanical parts hint that beneath it all, the performance is unstable. Or falling apart.
-          </p>
-          <a class="showcase-more" href="visual-development.html">View more</a>
-        </article>
-
-        <article class="showcase-block">
-          <h2>ENVIRONMENT DESIGN: THE PROCESS</h2>
-
-          <div class="process-grid process-grid-five" id="environments-process">
-            <figure class="process-card">
-              <div class="process-thumb env-1">
-                <img src="Images/storethumbnail.png" alt="Environment thumbnail for the store" />
-              </div>
-              <figcaption>1. Thumbnail</figcaption>
-            </figure>
-
-            <figure class="process-card">
-              <div class="process-thumb env-2">
-                <img src="Images/value for background.png" alt="Environment value study for background" />
-              </div>
-              <figcaption>2. Value Study</figcaption>
-            </figure>
-
-            <figure class="process-card">
-              <div class="process-thumb env-3">
-                <img src="Images/finalclockshop.png" alt="Final background of the clock shop" />
-              </div>
-              <figcaption>3. Color Block-In</figcaption>
-            </figure>
-
-            <figure class="process-card">
-              <div class="process-thumb env-4">
-                <img src="Images/bg shop 3.png" alt="Environment in game example" />
-              </div>
-              <figcaption>4. In-Game</figcaption>
-            </figure>
-
-            <figure class="process-card">
-              <div class="process-thumb env-5">
-                <img src="Images/finalclockshopeffect.png" alt="Alternate state effect for the clock shop" />
-              </div>
-              <figcaption>5. Visual Glitch Alternate Effect</figcaption>
-            </figure>
-          </div>
-
-          <p>
-            The shop needed to feel cluttered worn without interfering
-            with readability. I reserved low contrast areas behind the
-            character sprites and concentrated important props around exploration
-            points.
-          </p>
-        </article>
-
-      </section>
-
-      <section class="final-panels" aria-label="Implementation and production summary">
-        <div class="final-grid">
-          <article class="final-card" id="ui">
-            <h2>UI &amp; UX DESIGN</h2>
-            <div class="final-thumb final-thumb-ui" role="img" aria-label="UI and player experience placeholder" data-lightbox-src="Images/motiongraphic.png"></div>
-            <p>
-              A simple yet unique UI keeps dialogue and player controls clear
-              over dark backgrounds. Keeping the main focus on the game itself.
-            </p>
-            <a class="showcase-more" href="ui-motion-design.html">View more</a>
-          </article>
-
-          <article class="final-card">
-            <h2>IMPLEMENTATION</h2>
-            <div class="final-thumb final-thumb-impl" role="img" aria-label="Implementation script placeholder" data-lightbox-src="Images/implementation.png"></div>
-            <p>
-              Built scene logic, branching dialogue, audio cues, editing,
-              sound effects, and transitions in Ren'Py.
-            </p>
-          </article>
-
-          <article class="final-card">
-            <h2>PRODUCTION PROCESS</h2>
-            <div class="pipeline" role="img" aria-label="Production process flow" data-lightbox-src="Images/Using3DForDevolopement.png">
-              <span>Script Writing</span>
-              <span>Thumbnails</span>
-              <span>Asset Production</span>
-              <span>Editing &amp; SFX</span>
-              <span>Playtesting</span>
-              <span>Implementation</span>
-              <span>Export</span>
-              <span>Demo Release</span>
-            </div>
-            <p>
-              A simple tracked pipeline keeps scope, assets, and naming
-              organized from concept to export.
-            </p>
-          </article>
+      <section class="section finished-work" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / Finished work</p><h2 id="work-title">Art built for the story</h2></div>
+          <p>Characters, spaces, and interface elements share a theatrical, worn industrial palette. Each piece has to hold up on its own and remain readable in a dialogue scene.</p>
         </div>
 
-        <article class="learned-bar" aria-label="What I learned">
-          <h2>WHAT I LEARNED</h2>
-          <p>
-            Making Mechanical Heart taught me how to maintain visual
-            consistency across characters, environments, and UI while managing
-            the scope of an independent production.
-            It challenged me to balance my creative side with the practicalities of a solo development process.
-          </p>
-          <p>
-            I learned to prototype, revise, and adapt. All to deliver an enjoyable experience.
-          </p>
+        <article class="feature feature-character">
+          <div class="feature-art character-art">
+            <button class="art-button" type="button" data-full="assets/caster-sprite.webp" data-caption="Caster · final dialogue sprite" aria-label="Enlarge Caster final sprite">
+              <img src="assets/caster-sprite.webp" alt="Full character sprite of Caster wearing a tall hat and crimson coat">
+              
+            </button>
+          </div>
+          <div class="feature-copy">
+            <span class="feature-number">01 / Character design</span>
+            <h3>Caster</h3>
+            <p>A theatrical silhouette and restrained expression make the ringmaster feel composed at a glance. The half mask, dark layers, and red coat carry the tension underneath that performance.</p>
+            <a class="text-link" href="#character-process">See the design process <span aria-hidden="true">↓</span></a>
+          </div>
         </article>
 
-        <section class="details results-section" aria-label="Project results">
-          <article class="detail-block">
-            <h2>RESULTS</h2>
-            <ul>
-              <li>Released a playable public demo</li>
-              <li>50+ early downloads</li>
-              <li>5+ five-star ratings</li>
-              <li>Received paid player contribution</li>
-              <li>Ongoing development based on player feedback</li>
-            </ul>
-          </article>
+        <article class="feature feature-environment">
+          <div class="feature-copy">
+            <span class="feature-number">02 / Environment art</span>
+            <h3>Ash &amp; Cog Repairs</h3>
+            <p>The clock shop gives the story a lived-in starting place. I shaped the lighting and clusters of props around the room’s focal points, leaving space for characters and dialogue.</p>
+            <a class="text-link" href="#environment-process">See the environment process <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="feature-art scene-art">
+            <button class="art-button" type="button" data-full="assets/clock-shop.webp" data-caption="Ash & Cog Repairs · finished environment" aria-label="Enlarge Ash and Cog Repairs environment">
+              <img src="assets/clock-shop.webp" alt="Warm, dim clock shop interior with workbench, stool, wall clock and cabinets">
+              
+            </button>
+          </div>
+        </article>
+
+        <section class="ui-showcase" id="ui" aria-labelledby="ui-title">
+          <div class="ui-intro"><span class="feature-number">03 / Interface design</span><h3 id="ui-title">UI &amp; UX Design</h3><p>I explored menu hierarchy, recurring card motifs, and transition imagery before settling on the title screen used in the demo. The interface carries the same theatrical, mechanical tone as the characters and environments.</p></div>
+          <div class="ui-gallery">
+            <figure class="ui-piece"><button class="art-button" type="button" data-full="assets/menu-explorations.webp" data-caption="Menu layout explorations" aria-label="Enlarge menu layout explorations"><img src="assets/menu-explorations.webp" alt="Early Mechanical Heart menu layout with heart illustration and button placement"></button><figcaption><strong>Menu explorations</strong><span>Testing the title screen’s layout and control hierarchy.</span></figcaption></figure>
+            <figure class="ui-piece"><button class="art-button" type="button" data-full="assets/oracle-cards.webp" data-caption="Oracle card illustrations" aria-label="Enlarge oracle card illustrations"><img src="assets/oracle-cards.webp" alt="Four illustrated cards titled Masquerade, Stitcher, Mender and Heartlock"></button><figcaption><strong>Oracle cards</strong><span>Story objects that repeat the interface’s framing and palette.</span></figcaption></figure>
+            <figure class="ui-piece"><button class="art-button" type="button" data-full="assets/motion-study.webp" data-caption="Motion study frame" aria-label="Enlarge motion study frame"><img src="assets/motion-study.webp" alt="Layered red and black circus silhouette used as a motion study frame"></button><figcaption><strong>Motion study</strong><span>A layered frame exploring the look of transitions.</span></figcaption></figure>
+            <figure class="ui-piece"><button class="art-button" type="button" data-full="assets/menu-ui.webp" data-caption="Finished title menu" aria-label="Enlarge finished title menu"><img src="assets/menu-ui.webp" alt="Mechanical Heart title menu with a glowing anatomical heart and red textured background"></button><figcaption><strong>Finished title menu</strong><span>Heart illustration, type, and controls brought together for the playable demo.</span></figcaption></figure>
+          </div>
         </section>
+      </section>
 
-        <nav class="project-pager" aria-label="Project actions">
-          <a class="btn btn-solid" href="https://pyre3.itch.io/mechanical-heart" target="_blank" rel="noopener">PLAY THE DEMO</a>
-          <a class="btn btn-outline" href="index.html#contact">CONTACT</a>
-        </nav>
+      <section class="section progress-section" id="progress" aria-labelledby="progress-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / Concept &amp; progress</p><h2 id="progress-title">From study to scene</h2></div>
+          <p>Selected process work shows how I test silhouettes, color, and composition before bringing assets into the demo. These images are presented as development work.</p>
+        </div>
+
+        <div class="process-group" id="character-process">
+          <div class="process-intro"><h3>Finding Caster</h3><p>Early outfit studies explored shape and personality; color passes narrowed the palette before the dialogue sprite.</p></div>
+          <div class="process-gallery single-process">
+            <figure><button class="art-button" type="button" data-full="assets/caster-process-sheet.png" data-caption="Caster · character development process sheet" aria-label="Enlarge Caster character development sheet"><img src="assets/caster-process-sheet.png" alt="Caster process sheet showing early concepts, silhouette studies, color studies and final design"></button><figcaption>Character development · concept to final sprite</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="process-group" id="environment-process">
+          <div class="process-intro"><h3>Building the shop</h3><p>A simple layout becomes a value study, then a lit room designed to support sprites and dialogue.</p></div>
+          <div class="process-gallery three-up">
+            <figure><button class="art-button" type="button" data-full="assets/shop-thumbnail.webp" data-caption="Ash & Cog · layout drawing" aria-label="Enlarge shop layout"><img src="assets/shop-thumbnail.webp" alt="Line drawing of the shop's workbench and shelves"></button><figcaption>01 · Layout</figcaption></figure>
+            <figure><button class="art-button" type="button" data-full="assets/shop-value.webp" data-caption="Ash & Cog · value and form study" aria-label="Enlarge shop value study"><img src="assets/shop-value.webp" alt="Pale grayscale block-in of the shop interior"></button><figcaption>02 · Value study</figcaption></figure>
+            <figure><button class="art-button" type="button" data-full="assets/shop-game.webp" data-caption="Ash & Cog · in-game scene" aria-label="Enlarge in-game shop scene"><img src="assets/shop-game.webp" alt="The completed clock shop in its red, low-lit in-game state"></button><figcaption>03 · In-game lighting</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-image"><img src="assets/kenna-portrait.webp" alt="Portrait of Kenna May"></div>
+        <div class="about-copy"><p class="eyebrow">03 / About the artist</p><h2 id="about-title">Hi, I’m Kenna.</h2><p>I’m a 2D game artist and multimedia designer based in Anaheim, California. I like story-driven games where characters, environments, interface, and sound all help create the same feeling.</p><p>Mechanical Heart is my solo project. I’ve handled its visual development, narrative implementation, UI, promotional art, and audio. I’m looking for junior game art and multimedia roles where I can contribute across disciplines and keep growing as a visual developer.</p><a class="button button-secondary" href="mailto:kennamayphone@gmail.com">Email me</a></div>
       </section>
     </main>
+
+    <footer class="site-footer" id="contact"><div><span class="footer-title">Let’s make something with a little heart.</span><p>For game art and multimedia opportunities, get in touch.</p></div><div class="footer-links"><a href="mailto:kennamayphone@gmail.com">Email ↗</a><a href="https://pyre3.itch.io/mechanical-heart" target="_blank" rel="noopener noreferrer">Mechanical Heart on itch.io ↗</a><a href="https://www.instagram.com/black.cat.psd" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div><small>© <span id="year">2026</span> Kenna May</small></footer>
   </div>
 
-  <div class="lightbox" id="trailer-lightbox" aria-hidden="true">
-    <div class="lightbox-dialog trailer-dialog" role="dialog" aria-modal="true" aria-label="Mechanical Heart trailer">
-      <div class="lightbox-head">
-        <p class="lightbox-title">Mechanical Heart Trailer</p>
-        <button class="lightbox-close" id="trailer-close" type="button" aria-label="Close trailer">CLOSE</button>
-      </div>
-      <div class="trailer-popup-frame">
-        <iframe
-          id="trailer-iframe"
-          width="560"
-          height="315"
-          src=""
-          data-src="https://www.youtube.com/embed/zrllM4XvoBc?si=YkF4heZFQUiZaZIV"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="lightbox" id="art-lightbox" aria-hidden="true">
-    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Artwork preview">
-      <div class="lightbox-head">
-        <p class="lightbox-title" id="lightbox-title">Artwork preview</p>
-        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close preview">CLOSE</button>
-      </div>
-      <div class="lightbox-preview" id="lightbox-preview" role="img" aria-label="Preview image">
-        <button class="lightbox-nav lightbox-nav-prev" id="lightbox-prev" type="button" aria-label="Previous image">‹</button>
-        <button class="lightbox-nav lightbox-nav-next" id="lightbox-next" type="button" aria-label="Next image">›</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      const selectors = [
-        ".hero-art",
-        ".gallery-image",
-        ".direction-moodboard",
-        ".process-thumb",
-        ".final-thumb",
-        ".pipeline",
-        ".character-tab-art"
-      ].join(", ");
-
-      const triggers = Array.from(document.querySelectorAll(selectors));
-      const lightbox = document.getElementById("art-lightbox");
-      const preview = document.getElementById("lightbox-preview");
-      const title = document.getElementById("lightbox-title");
-      const closeBtn = document.getElementById("lightbox-close");
-      const prevBtn = document.getElementById("lightbox-prev");
-      const nextBtn = document.getElementById("lightbox-next");
-      const trailerTrigger = document.getElementById("watch-trailer-btn");
-      const trailerLightbox = document.getElementById("trailer-lightbox");
-      const trailerCloseBtn = document.getElementById("trailer-close");
-      const trailerIframe = document.getElementById("trailer-iframe");
-      const tabImage = document.getElementById("character-tab-image");
-      const tabArt = document.getElementById("character-tab-art");
-      const tabTitle = document.getElementById("character-tab-title");
-      const tabCaption = document.getElementById("character-tab-caption");
-      const characterDescription = document.getElementById("character-description");
-      const conceptsThumb = document.getElementById("character-concepts-thumb");
-      const conceptsImage = document.getElementById("character-concepts-image");
-      const silhouetteThumb = document.getElementById("character-silhouette-thumb");
-      const silhouetteImage = document.getElementById("character-silhouette-image");
-      const colorThumb = document.getElementById("character-color-thumb");
-      const colorImage = document.getElementById("character-color-image");
-      const finalThumb = document.getElementById("character-final-thumb");
-      const finalImage = document.getElementById("character-final-image");
-      let lastTrigger = null;
-      let currentTriggerIndex = -1;
-
-      const tabData = {
-        caster: {
-          title: "Caster",
-          caption: "Final sprite pass used for dialogue scenes.",
-          src: "Images/final sprite.png",
-          alt: "Caster final sprite concept",
-          concepts: { src: "Images/caster_character_concept.png", alt: "Caster early concepts" },
-          silhouette: { src: "Images/caster_silouette.png", alt: "Caster silhouette study" },
-          color: { src: "Images/colorstudy.png", alt: "Caster color studies" },
-          final: { src: "Images/final sprite.png", alt: "Caster final sprite" },
-          description:
-            "Caster's silhouette balances theatrical authority with subtle constraint. His attire and mannerisms communicate control, while the damaged mechanical parts hint that beneath it all, the performance is unstable. Or falling apart."
-        },
-      };
-
-      function setProcessThumb(thumbEl, imageEl, entry, fallbackAlt) {
-        if (entry) {
-          thumbEl.classList.remove("is-placeholder");
-          imageEl.src = entry.src;
-          imageEl.alt = entry.alt;
-          imageEl.style.display = "";
-        } else {
-          thumbEl.classList.add("is-placeholder");
-          imageEl.removeAttribute("src");
-          imageEl.alt = fallbackAlt;
-          imageEl.style.display = "none";
-        }
-      }
-
-      function setCharacterTab(key) {
-        const data = tabData[key];
-
-        if (!data) {
-          return;
-        }
-
-        tabImage.src = data.src;
-        tabImage.alt = data.alt;
-        tabArt.setAttribute("aria-label", data.alt);
-        tabTitle.textContent = data.title;
-        tabCaption.textContent = data.caption;
-        characterDescription.textContent = data.description;
-
-        setProcessThumb(conceptsThumb, conceptsImage, data.concepts, data.title + " early concepts placeholder");
-        setProcessThumb(silhouetteThumb, silhouetteImage, data.silhouette, data.title + " silhouette placeholder");
-        setProcessThumb(colorThumb, colorImage, data.color, data.title + " color studies placeholder");
-        setProcessThumb(finalThumb, finalImage, data.final, data.title + " final sprite placeholder");
-      }
-
-      function updateScrollLock() {
-        const hasOpenModal =
-          lightbox.classList.contains("is-open") ||
-          trailerLightbox.classList.contains("is-open");
-
-        if (hasOpenModal) {
-          document.body.classList.add("no-scroll");
-          return;
-        }
-
-        document.body.classList.remove("no-scroll");
-      }
-
-      function setLightboxContent(element) {
-        const explicitSource = element.getAttribute("data-lightbox-src");
-        const computed = window.getComputedStyle(element);
-        const directImage = element.querySelector("img");
-        const label = element.getAttribute("aria-label") || "Artwork preview";
-
-        if (explicitSource) {
-          preview.style.backgroundImage = "url(\"" + explicitSource + "\")";
-          preview.style.backgroundColor = "#0a0f17";
-          preview.style.backgroundRepeat = "no-repeat";
-          preview.style.backgroundPosition = "center";
-          preview.style.backgroundSize = "contain";
-        } else if (directImage && directImage.getAttribute("src")) {
-          preview.style.backgroundImage = "url(\"" + directImage.getAttribute("src") + "\")";
-          preview.style.backgroundColor = "#0a0f17";
-          preview.style.backgroundRepeat = "no-repeat";
-          preview.style.backgroundPosition = "center";
-          preview.style.backgroundSize = "contain";
-        } else {
-          preview.style.background = computed.background;
-          preview.style.backgroundPosition = "center";
-          preview.style.backgroundSize = "cover";
-        }
-
-        title.textContent = label;
-        preview.setAttribute("aria-label", label);
-      }
-
-      function openLightbox(element) {
-        currentTriggerIndex = triggers.indexOf(element);
-        setLightboxContent(element);
-
-        lightbox.classList.add("is-open");
-        lightbox.setAttribute("aria-hidden", "false");
-        updateScrollLock();
-      }
-
-      function showAdjacent(step) {
-        if (!triggers.length) {
-          return;
-        }
-
-        currentTriggerIndex = (currentTriggerIndex + step + triggers.length) % triggers.length;
-        const nextTrigger = triggers[currentTriggerIndex];
-        lastTrigger = nextTrigger;
-        setLightboxContent(nextTrigger);
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove("is-open");
-        lightbox.setAttribute("aria-hidden", "true");
-        currentTriggerIndex = -1;
-        updateScrollLock();
-
-        if (lastTrigger) {
-          lastTrigger.focus();
-        }
-      }
-
-      function openTrailer() {
-        trailerIframe.src = trailerIframe.dataset.src;
-        trailerLightbox.classList.add("is-open");
-        trailerLightbox.setAttribute("aria-hidden", "false");
-        updateScrollLock();
-      }
-
-      function closeTrailer() {
-        trailerLightbox.classList.remove("is-open");
-        trailerLightbox.setAttribute("aria-hidden", "true");
-        trailerIframe.src = "";
-        updateScrollLock();
-        trailerTrigger.focus();
-      }
-
-      triggers.forEach(function (item) {
-        item.classList.add("image-pop-trigger");
-        item.tabIndex = 0;
-        item.setAttribute("aria-haspopup", "dialog");
-
-        item.addEventListener("click", function () {
-          lastTrigger = item;
-          openLightbox(item);
-        });
-
-        item.addEventListener("keydown", function (event) {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            lastTrigger = item;
-            openLightbox(item);
-          }
-        });
-      });
-
-      closeBtn.addEventListener("click", closeLightbox);
-      prevBtn.addEventListener("click", function (event) {
-        event.stopPropagation();
-        showAdjacent(-1);
-      });
-      nextBtn.addEventListener("click", function (event) {
-        event.stopPropagation();
-        showAdjacent(1);
-      });
-      trailerTrigger.addEventListener("click", openTrailer);
-      trailerCloseBtn.addEventListener("click", closeTrailer);
-
-      lightbox.addEventListener("click", function (event) {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-
-      trailerLightbox.addEventListener("click", function (event) {
-        if (event.target === trailerLightbox) {
-          closeTrailer();
-        }
-      });
-
-      document.addEventListener("keydown", function (event) {
-        if (event.key !== "Escape") {
-          return;
-        }
-
-        if (trailerLightbox.classList.contains("is-open")) {
-          closeTrailer();
-          return;
-        }
-
-        if (lightbox.classList.contains("is-open")) {
-          if (event.key === "ArrowLeft") {
-            showAdjacent(-1);
-            return;
-          }
-
-          if (event.key === "ArrowRight") {
-            showAdjacent(1);
-            return;
-          }
-
-          closeLightbox();
-        }
-      });
-    })();
-  </script>
+  <dialog class="lightbox" id="art-dialog" aria-label="Artwork preview"><div class="lightbox-toolbar"><span id="lightbox-caption"></span><button id="lightbox-close" type="button" aria-label="Close artwork preview">Close ✕</button></div><div class="lightbox-view"><button id="lightbox-prev" class="lightbox-arrow" type="button" aria-label="Previous artwork">‹</button><img id="lightbox-image" alt=""><button id="lightbox-next" class="lightbox-arrow" type="button" aria-label="Next artwork">›</button></div><span class="lightbox-count" id="lightbox-count"></span></dialog>
 </body>
 </html>
