@@ -20,7 +20,7 @@
     current = (index + collection.length) % collection.length;
     const trigger = collection[current];
     status.textContent = 'Loading artwork…';
-    image.alt = trigger.querySelector('img').alt;
+    image.alt = trigger.dataset.alt || trigger.querySelector('img').alt;
     image.src = trigger.dataset.full;
     caption.textContent = trigger.dataset.caption;
     count.textContent = `${current + 1} / ${collection.length}`;
