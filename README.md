@@ -1,16 +1,17 @@
-## Hi there 👋
+# Kenna May · 2D Game Art Portfolio
 
-<!--
-**kenna-may-art/kenna-may-art** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+[Visit the portfolio](https://kenna-may-art.github.io/kenna-may-art.io/)
 
-Here are some ideas to get you started:
+A static portfolio featuring Mechanical Heart character art, environments, interface illustration, and development work, plus the “Not So Final Fantasy” Collection of environment drawings and perspective studies.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- `index.html`: homepage and contact information.
+- `mechanical-heart.html`: Mechanical Heart case study.
+- `visual-development.html`: direct artwork gallery with a keyboard-accessible viewer.
+- `additional-artwork.html`: fantasy environment collection.
+- `gallery.html`: compatible gallery URL.
+
+Mechanical Heart includes development sheets for Caster and the Collector, plus a four-stage environment pipeline ending with an in-game Ren’Py screenshot.
+
+The site uses HTML, CSS, and JavaScript with optimized WebP artwork previews and full-size viewer images. `.nojekyll` keeps GitHub Pages serving the static files directly.
+
+The previous public version remains recoverable at commit `991cf0702aae895af9e9df8ea6f5f0721e8fdcd1`.
