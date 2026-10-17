@@ -84,3 +84,13 @@
 .additional-artwork-grid figcaption{padding:1rem 1.2rem;color:var(--text);line-height:1.5;flex:1;border-top:1px solid var(--line)}
 .additional-artwork-grid figcaption span{display:block;color:var(--muted);font-size:.9rem}
 @media(max-width:700px){.additional-artwork-grid{grid-template-columns:1fr}.additional-artwork-section{margin-top:2rem}.additional-artwork-section+.additional-artwork-section{padding-top:2rem}}
+
+/* The playable scene gets a complete row after the three production stages. */
+.environment-pipeline .pipeline-in-game{grid-column:1/-1;margin-top:.5rem}
+.environment-pipeline .pipeline-in-game .art-button{aspect-ratio:1575/941;background:#090d12}
+.environment-pipeline .pipeline-in-game img{object-fit:contain}
+.pipeline-in-game figcaption strong{display:block;color:var(--gold);font-size:.95rem;font-weight:600}
+.pipeline-in-game figcaption span{display:block;margin-top:.25rem}
+
+/* Preserve the complete Collector presentation sheet and its embedded labels. */
+.collector-process .art-button{aspect-ratio:16/9;background:#000}

@@ -10,6 +10,8 @@ A static portfolio featuring Mechanical Heart character art, environments, inter
 - `additional-artwork.html`: fantasy environment collection.
 - `gallery.html`: compatible gallery URL.
 
+Mechanical Heart includes development sheets for Caster and the Collector, plus a four-stage environment pipeline ending with an in-game Ren’Py screenshot.
+
 The site uses HTML, CSS, and JavaScript with optimized WebP artwork previews and full-size viewer images. `.nojekyll` keeps GitHub Pages serving the static files directly.
 
-The previous public version remains recoverable at commit `812d17f732624485b6f4cae05aec1729b21ee6b5`.
+The previous public version remains recoverable at commit `991cf0702aae895af9e9df8ea6f5f0721e8fdcd1`.
